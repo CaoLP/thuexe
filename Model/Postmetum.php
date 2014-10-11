@@ -24,9 +24,21 @@ class Postmetum extends AppModel {
 			'order' => ''
 		)
 	);
-    public function beforeSave() {
+    public function beforeSave($option=array()) {
         if(isset($this->data[$this->alias]['meta_value'] ))
             $this->data[$this->alias]['meta_value'] = json_encode($this->data[$this->alias]['meta_value'] );
         return true;
+    }
+    public function afterFind($results, $primary = false){
+        $temp = array();
+        foreach($results as $key=>$val){
+            $subtemp = $val;
+            $subtemp[$this->alias]['meta_value'] = json_decode($val[$this->alias]['meta_value']);
+            $temp[$key] = $subtemp;
+        }
+        $results = $temp;
+//        debug($results);die;
+//        parent::afterFind($results, $primary);
+        return $results;
     }
 }

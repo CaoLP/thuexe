@@ -200,7 +200,9 @@ class PostsController extends AppController
             $this->view = $type;
 
         $parentPosts = $this->Post->ParentPost->find('list');
-        $this->set(compact('parentPosts','type'));
+        $arrayFields = Set::combine($this->request->data['Postmetum'],'{n}.meta_key','{n}.id');
+        $this->request->data['Postmetum'] = Set::combine($this->request->data['Postmetum'],'{n}.id','{n}');
+        $this->set(compact('parentPosts','type','arrayFields'));
     }
 
     /**
