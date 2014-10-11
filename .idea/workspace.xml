@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="655f1793-34bd-4fa0-963e-f32991fe961d" name="Default" comment="" />
+    <list default="true" id="655f1793-34bd-4fa0-963e-f32991fe961d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/cake_toolbar_cacheb40871e38a317b10f4a23b2c6d11b378" afterPath="$PROJECT_DIR$/tmp/cache/cake_toolbar_cacheb40871e38a317b10f4a23b2c6d11b378" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Postmetum.php" afterPath="$PROJECT_DIR$/Model/Postmetum.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/PostsController.php" afterPath="$PROJECT_DIR$/Controller/PostsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/webroot/js/admin.js" afterPath="$PROJECT_DIR$/View/Themed/Admin/webroot/js/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/cake_toolbar_cache" afterPath="$PROJECT_DIR$/tmp/cache/cake_toolbar_cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/logs/error.log" afterPath="$PROJECT_DIR$/tmp/logs/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_cake_dev_en" afterPath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_cake_dev_en" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_cake_en" afterPath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_cake_en" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_debug_kit_en" afterPath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_debug_kit_en" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_default_en" afterPath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_default_en" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_file_map" afterPath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_file_map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_method_cache" afterPath="$PROJECT_DIR$/tmp/cache/persistent/thuexedn_cake_core_method_cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_car_rental_bookings" afterPath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_car_rental_bookings" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_list" afterPath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_postmeta" afterPath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_postmeta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_posts" afterPath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_posts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_tour_schedules" afterPath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_tour_schedules" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_users" afterPath="$PROJECT_DIR$/tmp/cache/models/thuexedn_cake_model_default_thuexe_users" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="thuexedn.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,10 +48,37 @@
       <file leaf-file-name="weekly_tour.ctp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="54" selection-start="3947" selection-end="3947" vertical-scroll-proportion="0.045627378" vertical-offset="1592" max-vertical-offset="3280">
+            <state line="132" column="55" selection-start="5003" selection-end="5003" vertical-scroll-proportion="1.367742" vertical-offset="1476" max-vertical-offset="4368">
               <folding>
                 <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <marker date="1413040187793" expanded="true" signature="9939:10099" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="9977:10099" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="10014:10099" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="10051:10099" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="10319:10569" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="10356:10406" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="10475:10569" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="11103:11635" placeholder="..." />
+                <marker date="1413040187793" expanded="true" signature="11134:11628" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/webroot/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="14" selection-start="1129" selection-end="1135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="28" selection-start="4467" selection-end="4467" vertical-scroll-proportion="-109.36" vertical-offset="66" max-vertical-offset="3728">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,7 +86,7 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="55" selection-start="5218" selection-end="5218" vertical-scroll-proportion="-5.28" vertical-offset="2844" max-vertical-offset="3728">
+            <state line="188" column="0" selection-start="5278" selection-end="5278" vertical-scroll-proportion="-8.88" vertical-offset="2786" max-vertical-offset="3728">
               <folding />
             </state>
           </provider>
@@ -46,7 +95,16 @@
       <file leaf-file-name="Postmetum.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Postmetum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="528">
+            <state line="21" column="31" selection-start="415" selection-end="415" vertical-scroll-proportion="-13.44" vertical-offset="0" max-vertical-offset="608">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="181" column="29" selection-start="5497" selection-end="5508" vertical-scroll-proportion="-10.8" vertical-offset="2626" max-vertical-offset="3216">
               <folding />
             </state>
           </provider>
@@ -55,7 +113,7 @@
       <file leaf-file-name="PostmetaController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/PostmetaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="165" selection-end="173" vertical-scroll-proportion="-5.12" vertical-offset="0" max-vertical-offset="3296">
+            <state line="8" column="6" selection-start="165" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="3296">
               <folding />
             </state>
           </provider>
@@ -64,29 +122,7 @@
       <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="50" selection-start="2122" selection-end="2125" vertical-scroll-proportion="-11.52" vertical-offset="416" max-vertical-offset="944">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plugin/ElFinder/View/ElFinder/admin_index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="384">
-              <folding>
-                <marker date="1409047812000" expanded="true" signature="288:544" placeholder="..." />
-                <marker date="1409047812000" expanded="true" signature="312:533" placeholder="{...}" />
-                <marker date="1409047812000" expanded="true" signature="350:504" placeholder="{&quot;url&quot;: '&lt;?php echo $this-&gt;Html-&gt;url(array('plugin'=&gt;'el_finder','controller'=&gt;'el_finder','action'=&gt;'connector')) ?&gt;'...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Posts/admin_index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="1392">
+            <state line="53" column="50" selection-start="2122" selection-end="2125" vertical-scroll-proportion="-24.08" vertical-offset="102" max-vertical-offset="944">
               <folding />
             </state>
           </provider>
@@ -95,7 +131,7 @@
       <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="34" selection-start="907" selection-end="907" vertical-scroll-proportion="-10.6" vertical-offset="135" max-vertical-offset="1488">
+            <state line="25" column="34" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1488">
               <folding />
             </state>
           </provider>
@@ -110,15 +146,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="browse.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plugin/ElFinder/View/Layouts/browse.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="12" selection-start="198" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="912">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -126,13 +153,19 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/admin_index.ctp" />
         <option value="$PROJECT_DIR$/Config/bootstrap.php" />
         <option value="$PROJECT_DIR$/Plugin/ElFinder/Controller/ElFinderController.php" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/webroot/js/admin.js" />
         <option value="$PROJECT_DIR$/View/Themed/Admin/webroot/js/jquery.browser.js" />
         <option value="$PROJECT_DIR$/Plugin/ElFinder/webroot/elfinder/js/elfinder.min.js" />
         <option value="$PROJECT_DIR$/Plugin/ElFinder/webroot/elfinder/css/theme.css" />
@@ -143,8 +176,10 @@
         <option value="$PROJECT_DIR$/View/Themed/Admin/webroot/css/bootstrap-multiselect.css" />
         <option value="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/webroot/js/admin.js" />
         <option value="$PROJECT_DIR$/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp" />
+        <option value="$PROJECT_DIR$/Model/Postmetum.php" />
       </list>
     </option>
   </component>
@@ -213,7 +248,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -319,24 +354,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -933,10 +950,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -1017,7 +1034,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2128788" sideWeight="0.6705686" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159091" sideWeight="0.6705686" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1045,32 +1062,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/webroot/js/jquery.browser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="21" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.0" vertical-offset="1257" max-vertical-offset="1872">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plugin/ElFinder/webroot/elfinder/css/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="23" selection-start="1061" selection-end="1066" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="1712">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plugin/ElFinder/webroot/elfinder/css/elfinder.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1470" column="43" selection-start="28433" selection-end="28433" vertical-scroll-proportion="0.0" vertical-offset="9084" max-vertical-offset="30656">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plugin/ElFinder/webroot/elfinder/js/elfinder.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2136" column="147" selection-start="163297" selection-end="163297" vertical-scroll-proportion="0.0" vertical-offset="34013" max-vertical-offset="38368">
-          <folding />
-        </state>
+        <state line="2136" column="147" selection-start="163297" selection-end="163297" vertical-scroll-proportion="0.0" vertical-offset="34013" max-vertical-offset="38368" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Plugin/ElFinder/View/ElFinder/admin_browse.ctp">
@@ -1089,25 +1083,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
           <folding>
-            <marker date="1409047812000" expanded="true" signature="288:544" placeholder="..." />
-            <marker date="1409047812000" expanded="true" signature="312:533" placeholder="{...}" />
-            <marker date="1409047812000" expanded="true" signature="350:504" placeholder="{&quot;url&quot;: '&lt;?php echo $this-&gt;Html-&gt;url(array('plugin'=&gt;'el_finder','controller'=&gt;'el_finder','action'=&gt;'connector')) ?&gt;'...}" />
+            <marker date="1413028269594" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1413028269594" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1413028269594" expanded="true" signature="-1:-1" placeholder="{&quot;url&quot;: '&lt;?php echo $this-&gt;Html-&gt;url(array('plugin'=&gt;'el_finder','controller'=&gt;'el_finder','action'=&gt;'connector')) ?&gt;'...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Posts/admin_index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="1392">
+        <state line="17" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1392">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Themed/Admin/webroot/js/bootstrap-multiselect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1179" column="17" selection-start="42400" selection-end="42400" vertical-scroll-proportion="0.96481484" vertical-offset="18343" max-vertical-offset="18960">
-          <folding />
-        </state>
+        <state line="1179" column="17" selection-start="42400" selection-end="42400" vertical-scroll-proportion="0.96481484" vertical-offset="18343" max-vertical-offset="18960" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Themed/Admin/webroot/css/bootstrap-multiselect.css">
@@ -1119,44 +1111,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="34" selection-start="907" selection-end="907" vertical-scroll-proportion="-10.6" vertical-offset="135" max-vertical-offset="1488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="50" selection-start="2122" selection-end="2125" vertical-scroll-proportion="-11.52" vertical-offset="416" max-vertical-offset="944">
+        <state line="25" column="34" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1488">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/PostmetaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="165" selection-end="173" vertical-scroll-proportion="-5.12" vertical-offset="0" max-vertical-offset="3296">
+        <state line="8" column="6" selection-start="165" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="3296">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Postmetum.php">
+    <entry file="file://$PROJECT_DIR$/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="553">
+        <state line="181" column="29" selection-start="5497" selection-end="5508" vertical-scroll-proportion="-10.8" vertical-offset="2626" max-vertical-offset="3216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="28" selection-start="4467" selection-end="4467" vertical-scroll-proportion="-109.36" vertical-offset="66" max-vertical-offset="3728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="50" selection-start="2122" selection-end="2125" vertical-scroll-proportion="-24.08" vertical-offset="102" max-vertical-offset="944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/webroot/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="14" selection-start="1129" selection-end="1135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="55" selection-start="5218" selection-end="5218" vertical-scroll-proportion="-5.28" vertical-offset="2844" max-vertical-offset="3728">
+        <state line="188" column="0" selection-start="5278" selection-end="5278" vertical-scroll-proportion="-8.88" vertical-offset="2786" max-vertical-offset="3728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Postmetum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="31" selection-start="415" selection-end="415" vertical-scroll-proportion="-13.44" vertical-offset="0" max-vertical-offset="608">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="54" selection-start="3947" selection-end="3947" vertical-scroll-proportion="0.045627378" vertical-offset="1592" max-vertical-offset="3280">
+        <state line="132" column="55" selection-start="5003" selection-end="5003" vertical-scroll-proportion="1.367742" vertical-offset="1476" max-vertical-offset="4368">
           <folding>
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <marker date="1413040187793" expanded="true" signature="9939:10099" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="9977:10099" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="10014:10099" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="10051:10099" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="10319:10569" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="10356:10406" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="10475:10569" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="11103:11635" placeholder="..." />
+            <marker date="1413040187793" expanded="true" signature="11134:11628" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -24,4 +24,9 @@ class Postmetum extends AppModel {
 			'order' => ''
 		)
 	);
+    public function beforeSave() {
+        if(isset($this->data[$this->alias]['meta_value'] ))
+            $this->data[$this->alias]['meta_value'] = json_encode($this->data[$this->alias]['meta_value'] );
+        return true;
+    }
 }

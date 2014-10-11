@@ -1,3 +1,19 @@
+<?php
+if (!isset($arrayFields))
+    $arrayFields = array(
+        'startlocate' => 0,
+        'price' => 1,
+        'price_translate' => 2,
+        'start_date' => 3,
+        'total_days' => 4,
+        'total_nights' => 5,
+        'transport' => 6,
+        'more_info' => 7,
+        'price_info' => 8,
+        'thumbnail' => 9
+    );
+
+?>
 <script>
     var url = '<?php echo $this->Html->url(array(
 				'plugin'=>'el_finder',
@@ -42,7 +58,7 @@ fileInfo = elfinderInstance.file(event.data.file);
 
 if (fileInfo.mime != 'directory') {
 //                        callback( elfinderInstance.url(event.data.file) ); // get file path..
-$('#PostmetaThumbnail').val(elfinderInstance.url(event.data.file));
+$('#PostmetumThumbnail').val(elfinderInstance.url(event.data.file));
 $('#thumbail').html('<img class="img-thumbnail img-responsive" src="'+elfinderInstance.url(event.data.file)+'">');
 elfinderInstance.destroy();
 return false; // stop elfinder
@@ -81,7 +97,15 @@ $this->Html->scriptEnd();
                         <div class="posts">
                             <?php echo $this->Form->create('Post', array('class' => 'col-md-12')); ?>
                             <?php
+
                             echo $this->Form->hidden('id');
+                            foreach ($arrayFields as $val) {
+                                $id = '';
+                                if (isset($this->request->data['Post']['id'])) {
+                                    $id = $this->request->data['Post']['id'];
+                                };
+                                echo $this->Form->hidden('Postmetum.' . $val . '.post_id', array('value' => $id));
+                            }
                             $this->Form->inputDefaults(array(
 
                                 'div' => array('class' => 'form-group'),
@@ -91,32 +115,43 @@ $this->Html->scriptEnd();
                             ));
                             echo $this->Form->input('title');
                             echo $this->Form->input('url', array('class' => 'form-control slug'));
-                            echo $this->Form->input('excerpt', array('label' => array('text' => 'Mô tả ngắn')));
-                            echo $this->Form->input('body', array('label' => array('text' => 'Nội dung')));
-                            //                            echo $this->Form->input('parent_id',array('label'=>array('text'=>'Mục cha')));
+                            //                            echo $this->Form->input('parent_id',array('label'=>array('text'=>'M?c cha')));
                             echo $this->Form->hidden('status', array('value' => 1));
                             echo $this->Form->hidden('type', array('value' => $type));
-                            echo $this->Form->input('Postmeta.startlocate',
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['startlocate'] . '.meta_key',
+                                array('value' => 'startlocate'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['startlocate'] . '.meta_value',
                                 array(
                                     'label' => array('text' => 'Điểm xuất phát'),
+                                    'type' => 'text',
                                     'required' => true
                                 )
                             );
-                            echo $this->Form->input('Postmeta.price',
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['price'] . '.meta_key',
+                                array('value' => 'price'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['price'] . '.meta_value',
                                 array(
                                     'label' => array('text' => 'Giá tiền'),
                                     'type' => 'number',
                                     'required' => true
                                 )
                             );
-                            echo $this->Form->input('Postmeta.price_translate',
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['price_translate'] . '.meta_key',
+                                array('value' => 'price_translate'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['price_translate'] . '.meta_value',
                                 array(
-                                    'label' => array('text' => 'Giá tiền kèm phiên dịch'),
+                                    'label' => array('text' => 'Giá tiền khách quốc tế'),
                                     'type' => 'number',
                                     'required' => true
                                 )
                             );
-                            echo $this->Form->input('Postmeta.start_date',
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['start_date'] . '.meta_key',
+                                array('value' => 'start_date'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['start_date'] . '.meta_value',
                                 array(
                                     'label' => array('text' => 'Khởi hành'),
                                     'class' => 'form-control multiselect',
@@ -125,15 +160,21 @@ $this->Html->scriptEnd();
                                     'required' => true
                                 )
                             );
-                            echo $this->Form->input('Postmeta.total_days',
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['total_days'] . '.meta_key',
+                                array('value' => 'total_days'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['total_days'] . '.meta_value',
                                 array(
                                     'label' => array('text' => 'Số ngày'),
                                     'class' => 'form-control multiselect',
                                     'options' => $days_vi,
-                                    'required'=>true
+                                    'required' => true
                                 )
                             );
-                            echo $this->Form->input('Postmeta.total_nights',
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['total_nights'] . '.meta_key',
+                                array('value' => 'total_nights'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['total_nights'] . '.meta_value',
                                 array(
                                     'label' => array('text' => 'Số đêm'),
                                     'class' => 'form-control multiselect',
@@ -141,8 +182,33 @@ $this->Html->scriptEnd();
                                     'empty' => '--Chọn đêm--'
                                 )
                             );
-                            echo $this->Form->input('Postmeta.transport',
-                                array('label' => array('text' => 'Phương tiện')));
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['transport'] . '.meta_key',
+                                array('value' => 'transport'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['transport'] . '.meta_value',
+                                array('label' => array('text' => 'Phương tiện'),'type'=>'text'));
+
+
+                            echo $this->Form->input('excerpt', array('label' => array('text' => 'Mô tả ngắn')));
+                            echo $this->Form->input('body', array('label' => array('text' => 'Nội dung')));
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['more_info'] . '.meta_key',
+                                array('value' => 'more_info'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['more_info'] . '.meta_value',
+                                array(
+                                    'label' => array('text' => 'Thông tin điều khoản'),
+                                    'class' => 'form-control editor'
+                                )
+                            );
+
+                            echo $this->Form->hidden('Postmetum.' . $arrayFields['price_info'] . '.meta_key',
+                                array('value' => 'price_info'));
+                            echo $this->Form->input('Postmetum.' . $arrayFields['price_info'] . '.meta_value',
+                                array(
+                                    'label' => array('text' => 'Thông tin giá tour'),
+                                    'class' => 'form-control editor'
+                                )
+                            );
                             ?>
                         </div>
                     </div>
@@ -171,7 +237,9 @@ $this->Html->scriptEnd();
         <div class="widget-content">
             <div id="thumbail"></div>
             <?php
-            echo $this->Form->hidden('Postmeta.thumbnail');
+            echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_key',
+                array('value' => 'thumbnail'));
+            echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_value');
             ?>
             <a href="javascript:;" class="choice-img">Chọn ảnh</a>
         </div>

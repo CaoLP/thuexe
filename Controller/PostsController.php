@@ -186,7 +186,7 @@ class PostsController extends AppController
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Post->save($this->request->data)) {
-                $this->Post->Postmetum->save($this->request->data);
+                $this->Post->Postmetum->saveMany($this->request->data['Postmetum']);
                 $this->Session->setFlash(__('The post has been saved.'));
                 return $this->redirect(array('action' => 'index',$type));
             } else {
