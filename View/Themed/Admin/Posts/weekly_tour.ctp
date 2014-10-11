@@ -58,7 +58,7 @@ fileInfo = elfinderInstance.file(event.data.file);
 
 if (fileInfo.mime != 'directory') {
 //                        callback( elfinderInstance.url(event.data.file) ); // get file path..
-$('#PostmetumThumbnail').val(elfinderInstance.url(event.data.file));
+$('#picInput').val(elfinderInstance.url(event.data.file));
 $('#thumbail').html('<img class="img-thumbnail img-responsive" src="'+elfinderInstance.url(event.data.file)+'">');
 elfinderInstance.destroy();
 return false; // stop elfinder
@@ -71,6 +71,10 @@ elfinderDialog.modal('hide');
 }).elfinder('instance');
 });
 $('.multiselect').multiselect();
+
+var imgData = $('#picInput').val();
+$('#thumbail').html('<img class="img-thumbnail img-responsive" src="'+imgData+'">');
+
 });
 <?php
 $this->Html->scriptEnd();
@@ -239,7 +243,7 @@ $this->Html->scriptEnd();
             <?php
             echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_key',
                 array('value' => 'thumbnail'));
-            echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_value');
+            echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_value',array('id'=>'picInput'));
             ?>
             <a href="javascript:;" class="choice-img">Chọn ảnh</a>
         </div>

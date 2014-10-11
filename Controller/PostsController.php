@@ -199,6 +199,24 @@ class PostsController extends AppController
         if ($type != null)
             $this->view = $type;
 
+        switch($type){
+            case 'car_rental':
+                $this->title_for_layout = 'Xe cho thuê';
+                break;
+            case 'daily_tour':
+                $this->title_for_layout = 'Tour hằng ngày';
+                break;
+            case 'weekly_tour':
+                $this->title_for_layout = 'Tour hằng tuần';
+                break;
+            case 'rental_option':
+                $this->title_for_layout = 'Chặn xe';
+                break;
+            default:
+                $this->title_for_layout = 'Post';
+                break;
+        }
+        $this->setTitleForLayout();
         $parentPosts = $this->Post->ParentPost->find('list');
         $arrayFields = Set::combine($this->request->data['Postmetum'],'{n}.meta_key','{n}.id');
         $this->request->data['Postmetum'] = Set::combine($this->request->data['Postmetum'],'{n}.id','{n}');
