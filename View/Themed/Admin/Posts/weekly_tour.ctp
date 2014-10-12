@@ -85,49 +85,49 @@ $this->Html->scriptEnd();
 <?php
 $this->Html->scriptStart(array('inline' => false));
 ?>
-    $(document).ready(function () {
-        $('#select-img-list').on('click', function () {
-            var elfinderDialog = $("#elfinder-dialog").modal('show');
-            var f = $('#elfinder-container').elfinder({
-                url: '<?php echo $this->Html->url(array(
+$(document).ready(function () {
+$('#select-img-list').on('click', function () {
+var elfinderDialog = $("#elfinder-dialog").modal('show');
+var f = $('#elfinder-container').elfinder({
+url: '<?php echo $this->Html->url(array(
     'plugin' => 'el_finder',
     'controller' => 'el_finder',
     'action' => 'connector'
 ));?>',
-                handlers: {
-                    dblclick: function (event, elfinderInstance) {
-                        event.preventDefault();
-                        fileInfo = elfinderInstance.file(event.data.file);
+handlers: {
+dblclick: function (event, elfinderInstance) {
+event.preventDefault();
+fileInfo = elfinderInstance.file(event.data.file);
 
-                        if (fileInfo.mime != 'directory') {
+if (fileInfo.mime != 'directory') {
 //                        callback( elfinderInstance.url(event.data.file) ); // get file path..
-                            var lst = $('#image-list-input').val();
-                            $('#image-list-input').val(lst + ';' + elfinderInstance.url(event.data.file));
-                            $('#image-list').html($('#image-list').html() +
-                                '<li class="col-md-2">' +
-                                '<img class="img-thumbnail img-responsive" src="' + elfinderInstance.url(event.data.file) + '">' +
-                                '<a href="javascript:;" class="rm-img">Remove</a>' +
-                                '</li>');
-                            elfinderInstance.destroy();
-                            return false; // stop elfinder
-                        }
-                    },
-                    destroy: function (event, elfinderInstance) {
-                        elfinderDialog.modal('hide');
-                    }
-                }
-            }).elfinder('instance');
-        });
+var lst = $('#image-list-input').val();
+$('#image-list-input').val(lst + ';' + elfinderInstance.url(event.data.file));
+$('#image-list').html($('#image-list').html() +
+'<li class="col-md-2">' +
+    '<img class="img-thumbnail img-responsive" src="' + elfinderInstance.url(event.data.file) + '">' +
+    '<a href="javascript:;" class="rm-img">Remove</a>' +
+    '</li>');
+elfinderInstance.destroy();
+return false; // stop elfinder
+}
+},
+destroy: function (event, elfinderInstance) {
+elfinderDialog.modal('hide');
+}
+}
+}).elfinder('instance');
+});
 
-        $(document).on('click','.rm-img',function(){
-            $(this).closest('li').remove();
-            var imglist = "";
-            $('#image-list li').each(function(){
-                imglist+= ';'+$(this).find('img').attr('src');
-            });
-            $('#image-list-input').val(imglist);
-        });
-    });
+$(document).on('click','.rm-img',function(){
+$(this).closest('li').remove();
+var imglist = "";
+$('#image-list li').each(function(){
+imglist+= ';'+$(this).find('img').attr('src');
+});
+$('#image-list-input').val(imglist);
+});
+});
 <?php
 $this->Html->scriptEnd();
 ?>
@@ -281,15 +281,17 @@ $this->Html->scriptEnd();
 
                                     <ul id="image-list" class="gallery-container">
                                         <?php
-                                        $images = $this->request->data['Postmetum'][$arrayFields['images']]['meta_value'];
-                                        $images = explode(';', $images);
-                                        $images = array_filter($images);
-                                        foreach ($images as $image) {
-                                            echo '
-                                        <li class="col-md-2">
-                                        <img class="img-thumbnail img-responsive" src="' . $image . '">
-                                        <a href="javascript:;"  class="rm-img">Remove</a>
-                                        </li>';
+                                        if(isset($this->request->data['Postmetum'][$arrayFields['images']]['meta_value'])){
+                                            $images = $this->request->data['Postmetum'][$arrayFields['images']]['meta_value'];
+                                            $images = explode(';', $images);
+                                            $images = array_filter($images);
+                                            foreach ($images as $image) {
+                                                echo '
+                                            <li class="col-md-2">
+                                            <img class="img-thumbnail img-responsive" src="' . $image . '">
+                                            <a href="javascript:;"  class="rm-img">Remove</a>
+                                            </li>';
+                                            }
                                         }
                                         ?>
                                     </ul>
