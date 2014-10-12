@@ -156,20 +156,50 @@ class PostsController extends AppController
      */
     public function admin_add($type = null)
     {
-        if ($this->request->is('post')) {
+        if ($type != null) {
+            $data = $this->Post->checkDraftPost();
+            if($data ==null){
             $this->Post->create();
-            if ($this->Post->save($this->request->data)) {
-                $this->Session->setFlash(__('The post has been saved.'));
-                return $this->redirect(array('action' => 'index',$type));
-            } else {
-                $this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+            $templateData = array(
+                'Post' => array(
+                    'status' => '0'
+                )
+            );
+            $this->Post->save($templateData, false);
+            $id = $this->Post->id;
+            }else{
+                $id = $data;
+                $templateData = array(
+                    'Post' => array(
+                        'id' =>$id,
+                        'body'=>'',
+                        'title'=>'',
+                        'excerpt'=>'',
+                        'url'=>'',
+                        'parent_id'=>0,
+                        'type'=>'post',
+                        'status' => '0'
+                    )
+                );
+                $this->Post->save($templateData, false);
             }
-        }
-        if ($type != null)
-            $this->view = $type;
+            return $this->redirect(array('action' => 'edit', $id, $type));
+        } else {
+            if ($this->request->is('post')) {
+                $this->Post->create();
+                if ($this->Post->save($this->request->data)) {
+                    $this->Session->setFlash(__('The post has been saved.'));
+                    return $this->redirect(array('action' => 'index', $type));
+                } else {
+                    $this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+                }
+            }
+            if ($type != null)
+                $this->view = $type;
 
-        $parentPosts = $this->Post->ParentPost->find('list');
-        $this->set(compact('parentPosts','type'));
+            $parentPosts = $this->Post->ParentPost->find('list');
+            $this->set(compact('parentPosts', 'type'));
+        }
     }
 
     /**
@@ -179,7 +209,7 @@ class PostsController extends AppController
      * @param string $id
      * @return void
      */
-    public function admin_edit($id = null,$type = null)
+    public function admin_edit($id = null, $type = null)
     {
         if (!$this->Post->exists($id)) {
             throw new NotFoundException(__('Invalid post'));
@@ -188,7 +218,7 @@ class PostsController extends AppController
             if ($this->Post->save($this->request->data)) {
                 $this->Post->Postmetum->saveMany($this->request->data['Postmetum']);
                 $this->Session->setFlash(__('The post has been saved.'));
-                return $this->redirect(array('action' => 'index',$type));
+                return $this->redirect(array('action' => 'index', $type));
             } else {
                 $this->Session->setFlash(__('The post could not be saved. Please, try again.'));
             }
@@ -199,7 +229,7 @@ class PostsController extends AppController
         if ($type != null)
             $this->view = $type;
 
-        switch($type){
+        switch ($type) {
             case 'car_rental':
                 $this->title_for_layout = 'Xe cho thuê';
                 break;
@@ -218,9 +248,12 @@ class PostsController extends AppController
         }
         $this->setTitleForLayout();
         $parentPosts = $this->Post->ParentPost->find('list');
-        $arrayFields = Set::combine($this->request->data['Postmetum'],'{n}.meta_key','{n}.id');
-        $this->request->data['Postmetum'] = Set::combine($this->request->data['Postmetum'],'{n}.id','{n}');
-        $this->set(compact('parentPosts','type','arrayFields'));
+        if ($this->request->data['Postmetum']) {
+            $arrayFields = Set::combine($this->request->data['Postmetum'], '{n}.meta_key', '{n}.id');
+            $this->request->data['Postmetum'] = Set::combine($this->request->data['Postmetum'], '{n}.id', '{n}');
+            $this->set(compact('arrayFields'));
+        }
+        $this->set(compact('parentPosts', 'type'));
     }
 
     /**
@@ -230,7 +263,7 @@ class PostsController extends AppController
      * @param string $id
      * @return void
      */
-    public function admin_delete($id = null,$type=null)
+    public function admin_delete($id = null, $type = null)
     {
         $this->Post->id = $id;
         if (!$this->Post->exists()) {
@@ -242,6 +275,6 @@ class PostsController extends AppController
         } else {
             $this->Session->setFlash(__('The post could not be deleted. Please, try again.'));
         }
-        return $this->redirect(array('action' => 'index',$type));
+        return $this->redirect(array('action' => 'index', $type));
     }
 }
