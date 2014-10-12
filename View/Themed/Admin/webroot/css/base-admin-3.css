@@ -1262,7 +1262,7 @@ ul.pagination li.active a:hover {
   text-align: center;
 }
 .gallery-container li {
-  width: 200px;
+  /*width: 200px;*/
   display: inline-block;
   vertical-align: top;
   margin: 0 5px;

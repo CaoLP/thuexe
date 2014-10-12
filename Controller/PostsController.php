@@ -124,7 +124,8 @@ class PostsController extends AppController
         if ($type != null) {
             $this->Paginator->settings = array(
                 'conditions' => array(
-                    'Post.type' => $type
+                    'Post.type' => $type,
+                    'Post.status' => 1
                 )
             );
 //            $type = '/'.$type;

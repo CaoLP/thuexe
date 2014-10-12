@@ -9,7 +9,7 @@ if ($this->request->params['action'] == 'admin_add') {
 
 } else {
 
-    $this->Html->addCrumb ($this->request->data['Post']['name'], '/'.$this->request->url);
+    $this->Html->addCrumb ($this->request->data['Post']['title'], '/'.$this->request->url);
 
 }
 

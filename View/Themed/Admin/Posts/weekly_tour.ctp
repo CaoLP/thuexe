@@ -1,5 +1,6 @@
 <?php
-if (!isset($arrayFields))
+$edit = true;
+if (!isset($arrayFields)) {
     $arrayFields = array(
         'startlocate' => 0,
         'price' => 1,
@@ -10,9 +11,11 @@ if (!isset($arrayFields))
         'transport' => 6,
         'more_info' => 7,
         'price_info' => 8,
-        'thumbnail' => 9
+        'thumbnail' => 9,
+        'images' => 10
     );
-
+    $edit = false;
+}
 ?>
 <script>
     var url = '<?php echo $this->Html->url(array(
@@ -79,6 +82,55 @@ $('#thumbail').html('<img class="img-thumbnail img-responsive" src="'+imgData+'"
 <?php
 $this->Html->scriptEnd();
 ?>
+<?php
+$this->Html->scriptStart(array('inline' => false));
+?>
+    $(document).ready(function () {
+        $('#select-img-list').on('click', function () {
+            var elfinderDialog = $("#elfinder-dialog").modal('show');
+            var f = $('#elfinder-container').elfinder({
+                url: '<?php echo $this->Html->url(array(
+    'plugin' => 'el_finder',
+    'controller' => 'el_finder',
+    'action' => 'connector'
+));?>',
+                handlers: {
+                    dblclick: function (event, elfinderInstance) {
+                        event.preventDefault();
+                        fileInfo = elfinderInstance.file(event.data.file);
+
+                        if (fileInfo.mime != 'directory') {
+//                        callback( elfinderInstance.url(event.data.file) ); // get file path..
+                            var lst = $('#image-list-input').val();
+                            $('#image-list-input').val(lst + ';' + elfinderInstance.url(event.data.file));
+                            $('#image-list').html($('#image-list').html() +
+                                '<li class="col-md-2">' +
+                                '<img class="img-thumbnail img-responsive" src="' + elfinderInstance.url(event.data.file) + '">' +
+                                '<a href="javascript:;" class="rm-img">Remove</a>' +
+                                '</li>');
+                            elfinderInstance.destroy();
+                            return false; // stop elfinder
+                        }
+                    },
+                    destroy: function (event, elfinderInstance) {
+                        elfinderDialog.modal('hide');
+                    }
+                }
+            }).elfinder('instance');
+        });
+
+        $(document).on('click','.rm-img',function(){
+            $(this).closest('li').remove();
+            var imglist = "";
+            $('#image-list li').each(function(){
+                imglist+= ';'+$(this).find('img').attr('src');
+            });
+            $('#image-list-input').val(imglist);
+        });
+    });
+<?php
+$this->Html->scriptEnd();
+?>
 <div class="col-md-9">
     <div class="widget stacked ">
         <div class="widget-header">
@@ -108,6 +160,8 @@ $this->Html->scriptEnd();
                                 if (isset($this->request->data['Post']['id'])) {
                                     $id = $this->request->data['Post']['id'];
                                 };
+                                if ($edit)
+                                    echo $this->Form->hidden('Postmetum.' . $val . '.id', array('value' => $val));
                                 echo $this->Form->hidden('Postmetum.' . $val . '.post_id', array('value' => $id));
                             }
                             $this->Form->inputDefaults(array(
@@ -190,7 +244,7 @@ $this->Html->scriptEnd();
                             echo $this->Form->hidden('Postmetum.' . $arrayFields['transport'] . '.meta_key',
                                 array('value' => 'transport'));
                             echo $this->Form->input('Postmetum.' . $arrayFields['transport'] . '.meta_value',
-                                array('label' => array('text' => 'Phương tiện'),'type'=>'text'));
+                                array('label' => array('text' => 'Phương tiện'), 'type' => 'text'));
 
 
                             echo $this->Form->input('excerpt', array('label' => array('text' => 'Mô tả ngắn')));
@@ -214,6 +268,33 @@ $this->Html->scriptEnd();
                                 )
                             );
                             ?>
+                            <?php if (isset($arrayFields['images'])): ?>
+                                <div class="form-group">
+                                    <label for="">Hình ảnh</label>
+                                    <?php
+                                    echo $this->Form->hidden('Postmetum.' . $arrayFields['images'] . '.meta_key',
+                                        array('value' => 'images'));
+                                    echo $this->Form->hidden('Postmetum.' . $arrayFields['images'] . '.meta_value',array('id'=>'image-list-input'));
+                                    ?>
+                                    <a href="javascript:;" id="select-img-list" class="btn btn-primary form-control">Thêm
+                                        hình ảnh</a>
+
+                                    <ul id="image-list" class="gallery-container">
+                                        <?php
+                                        $images = $this->request->data['Postmetum'][$arrayFields['images']]['meta_value'];
+                                        $images = explode(';', $images);
+                                        $images = array_filter($images);
+                                        foreach ($images as $image) {
+                                            echo '
+                                        <li class="col-md-2">
+                                        <img class="img-thumbnail img-responsive" src="' . $image . '">
+                                        <a href="javascript:;"  class="rm-img">Remove</a>
+                                        </li>';
+                                        }
+                                        ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -243,7 +324,7 @@ $this->Html->scriptEnd();
             <?php
             echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_key',
                 array('value' => 'thumbnail'));
-            echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_value',array('id'=>'picInput'));
+            echo $this->Form->hidden('Postmetum.' . $arrayFields['thumbnail'] . '.meta_value', array('id' => 'picInput'));
             ?>
             <a href="javascript:;" class="choice-img">Chọn ảnh</a>
         </div>
