@@ -15,7 +15,15 @@ class PostsController extends AppController
      * @var array
      */
     public $components = array('Paginator');
-
+    /**
+     * index method
+     *
+     * @return void
+     */
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index');
+    }
     /**
      * index method
      *

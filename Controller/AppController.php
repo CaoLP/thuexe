@@ -41,8 +41,8 @@ class AppController extends Controller
     {
         $this->Auth->allow('admin_login');
         $this->theme = isset($this->params['admin']) ? "Admin" : "Site";
-        $days_viet = array('Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy', 'Chủ nhật');
-        $days_en = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+        $days_viet = array('Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy', 'Chủ nhật','Hằng ngày');
+        $days_en = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday','Everyday');
         $days_vi = array(
             '1/2 ngày', '1 ngày', '2 ngày', '3 ngày', '4 ngày', '5 ngày', '6 ngày', '7 ngày',
             '8 ngày', '9 ngày', '10 ngày', '11 ngày', '12 ngày', '13 ngày', '14 ngày', '15 ngày',
