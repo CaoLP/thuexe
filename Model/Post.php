@@ -240,5 +240,44 @@ class Post extends AppModel
         if(isset($data['Post']['id']))
             return $data['Post']['id'];
     }
-
+	public function getTopCar(){
+		$condition = array(
+			'conditions' => array(
+				'Post.type' => 'car_rental',
+				'Post.status' => 1
+			),
+			'limit'=>12
+		);
+		return $this->find('all',$condition);
+	}
+	public function getTopDaily(){
+		$condition = array(
+			'conditions' => array(
+				'Post.type' => 'daily_tour',
+				'Post.status' => 1
+			),
+			'limit'=>6
+		);
+		return $this->find('all',$condition);
+	}
+	public function getTopWeekly(){
+		$condition = array(
+			'conditions' => array(
+				'Post.type' => 'weekly_tour',
+				'Post.status' => 1
+			),
+			'limit'=>6
+		);
+		return $this->find('all',$condition);
+	}
+	public function getFeatures(){
+		$condition = array(
+			'conditions' => array(
+				'Post.type' => 'daily_tour',
+				'Post.status' => 1
+			),
+			'limit'=>4
+		);
+		return $this->find('all',$condition);
+	}
 }

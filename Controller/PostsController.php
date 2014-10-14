@@ -22,19 +22,59 @@ class PostsController extends AppController
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index');
+        $this->Auth->allow('index','home','car_rental','view');
     }
     /**
      * index method
      *
      * @return void
      */
-    public function index()
+    public function index($type=null)
     {
-        $this->Post->recursive = 0;
+        $this->Post->recursive = 1;
+		if ($type != null) {
+			$this->Paginator->settings = array(
+				'conditions' => array(
+					'Post.type' => $type,
+					'Post.status' => 1
+				)
+			);
+		}
+		$this->set(compact('type'));
         $this->set('posts', $this->Paginator->paginate());
     }
-
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+	public function home()
+	{
+		$this->layout = 'home';
+		$cars = $this->Post->getTopCar();
+		$top_daily =  $this->Post->getTopDaily();
+		$top_weekly =  $this->Post->getTopWeekly();
+		$features = $this->Post->getFeatures();
+		$this->set(compact('cars','top_daily','top_weekly','features'));
+	}
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+	public function car_rental()
+	{
+		$this->Post->recursive = 1;
+		$type = 'car_rental';
+		$this->Paginator->settings = array(
+			'conditions' => array(
+				'Post.type' => $type,
+				'Post.status' => 1
+			)
+		);
+		$this->set(compact('type'));
+		$this->set('posts', $this->Paginator->paginate());
+	}
     /**
      * view method
      *

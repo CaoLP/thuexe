@@ -35,8 +35,8 @@ class AppController extends Controller
             'loginError' => 'Invalid Username or Password entered, please try again.'
 
         ));
-
-// only allow the login controllers only
+	public $helpers = array('Image');
+	// only allow the login controllers only
     public function beforeFilter()
     {
         $this->Auth->allow('admin_login');

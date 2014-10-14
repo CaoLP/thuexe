@@ -1,72 +1,141 @@
-<div class="posts index">
-	<h2><?php echo __('Posts'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('created_by'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('body'); ?></th>
-			<th><?php echo $this->Paginator->sort('title'); ?></th>
-			<th><?php echo $this->Paginator->sort('excerpt'); ?></th>
-			<th><?php echo $this->Paginator->sort('status'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
-			<th><?php echo $this->Paginator->sort('parent_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('url'); ?></th>
-			<th><?php echo $this->Paginator->sort('type'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
-	<?php foreach ($posts as $post): ?>
-	<tr>
-		<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['created_by']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['created']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['body']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['title']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['excerpt']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['status']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['updated']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($post['ParentPost']['title'], array('controller' => 'posts', 'action' => 'view', $post['ParentPost']['id'])); ?>
-		</td>
-		<td><?php echo h($post['Post']['url']); ?>&nbsp;</td>
-		<td><?php echo h($post['Post']['type']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array(), __('Are you sure you want to delete # %s?', $post['Post']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</tbody>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+<div class="row">
+	<div class="col-md-12 p-r-15">
+		<h2 class="feature-title-tour f-left"><?php echo $type=='weekly_tour'?'TOUR HẰNG TUẦN':$type=='daily_tour'?'TOUR HẰNG NGÀY':'BẢNG BÁO GIÁ';?></h2>
+
+		<img class="f-right" src="http://cdn.dulichhe.com/images/2014/goi-tu-van.gif" width="239"
+			 height="50" alt="Goi tu van">
 	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Post'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Parent Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Car Rental Bookings'), array('controller' => 'car_rental_bookings', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Car Rental Booking'), array('controller' => 'car_rental_bookings', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Postmeta'), array('controller' => 'postmeta', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Postmetum'), array('controller' => 'postmeta', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Tour Schedules'), array('controller' => 'tour_schedules', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Tour Schedule'), array('controller' => 'tour_schedules', 'action' => 'add')); ?> </li>
-	</ul>
+<?php
+foreach ($posts as $key => $post) {
+	$post_metas = Set::combine ($post['Postmetum'], '{n}.meta_key', '{n}');
+	$start_date = $post_metas['start_date']['meta_value'];
+	$temp_array = array();
+	foreach($start_date as $val){
+		$temp_array[] = $days_viet[$val];
+	}
+	?>
+	<div class="row">
+		<div class="col-md-7 p-zero">
+			<table>
+				<?php if ($key == 0): ?>
+					<thead>
+					<tr>
+						<th>
+							Tên tour
+						</th>
+					</tr>
+					</thead>
+				<?php endif; ?>
+				<tbody>
+				<tr>
+					<td>
+						<div class="media">
+							<a href="<?php
+							echo $this->Html->url(
+								array(
+									 'controller'=>'posts',
+									 'action'=>'view',
+									 'type'=>$type,
+									 $post['Post']['url']
+								)
+							);
+							?>">
+								<h3 class="media-heading"><?php echo $post['Post']['title'] ?></h3>
+							</a>
+							<a class="pull-left" href="<?php
+							echo $this->Html->url(
+								array(
+									 'controller'=>'posts',
+									 'action'=>'view',
+									 'type'=>$type,
+									 $post['Post']['url']
+								)
+							);
+							?>" title="<?php echo $post['Post']['title'] ?>">
+								<img class="media-object"
+									 src="<?php echo $this->Image->resizedUrl($post_metas['thumbnail']['meta_value'],200,119,100,WWW_ROOT);?>"
+									 alt="<?php echo $post['Post']['title'] ?>">
+							</a>
+
+							<div class="media-body">
+								<ul class="ul-list-style-none">
+									<li>
+										<strong>
+											<i class="glyphicon glyphicon-arrow-right"></i> Khởi hành từ <?php echo $post_metas['startlocate']['meta_value'];?>
+										</strong>
+									</li>
+									<li><strong>Thời gian:</strong> <?php
+											echo $days_vi[$post_metas['total_days']['meta_value']];
+											if(!empty($post_metas['total_nights']['meta_value']))
+											echo ' '. $nights_vi[$post_metas['total_nights']['meta_value']];
+										?></li>
+									<li><strong>Phương tiện:</strong> <?php echo $post_metas['transport']['meta_value'];?></li>
+									<li>
+									<strong>Khởi hành:</strong>
+									<?php
+									echo implode(', ',$temp_array);
+									?></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-5 p-r-15">
+			<table>
+				<?php if ($key == 0): ?>
+					<thead>
+					<tr>
+						<th style="width: 35%;" class="text-center">Ngày đi</th>
+						<th style="width: 35%;" class="text-center">Giá</th>
+						<th style="width: 30%;" class="text-right">Đặt tour</th>
+					</tr>
+					</thead>
+				<?php endif; ?>
+				<tbody>
+				<tr>
+					<td colspan="3">
+						<table>
+							<tr style="height: 15px">
+								<td style="width: 35%;" class="text-center"></td>
+								<td style="width: 35%;" class="text-center"></td>
+								<td style="width: 30%;"></td>
+							</tr>
+							<tr>
+								<td class="text-center"><span class="date-text">30/03/2015</span></td>
+								<td class="text-center"><span class="price-text">3.750.000</span></td>
+								<td><a href="javascript:;" class="btn-sm btn-success f-right">Đặt tour</a></td>
+							</tr>
+							<tr>
+								<td class="text-center"><span class="date-text">30/03/2015</span></td>
+								<td class="text-center"><span class="price-text">3.750.000</span></td>
+								<td><a href="javascript:;" class="btn-sm btn-success f-right">Đặt tour</a></td>
+							</tr>
+
+						</table>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+<?php
+}
+?>
+<div class="row">
+	<div class="col-md-12 p-r-15">
+		<ul class="pagination f-right">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
 </div>

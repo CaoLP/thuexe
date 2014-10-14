@@ -49,6 +49,14 @@
     font-size: 22px;
     color: #033b5f;
 }
+.feature-title-tour{
+    margin: 20px 0px 5px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #de6f11;
+}
+
 .link-level4{
     font-size: 12px;
     color: #036;
@@ -82,6 +90,33 @@
 .content-index .container{
     background-color: #FFFFFF;
 }
+.content-index .thumbnail{
+    margin-bottom: 0px;
+    text-align: center;
+}
+.tour-list table{
+    width: 100%;
+}
+.tour-list table thead{
+    border-bottom: 2px solid #033b5f;
+}
+.tour-list table td{
+    padding: 2px;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.remove-m-t{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.remove-m-t .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 @media (min-width: 1000px){
     #carousel-example-generic .carousel-caption{
         margin-bottom: 100px;
@@ -98,7 +133,7 @@
 }
 @media (min-width: 768px){
     .top-nav .w-t{
-        width: 170px;
+        /*width: 170px;*/
         text-align: center;
     }
     .top-nav .navbar-nav>li{
@@ -108,6 +143,9 @@
     .top-nav .navbar-nav>li>a {
         padding-top: 21px;
         padding-bottom: 21px;
+    }
+    .content-index .thumbnail{
+        height: 228px;
     }
 }
 
@@ -135,6 +173,34 @@
     padding: 1px 0 0 1px;
 
 }
+.p-r-15{
+    padding: 1px 15px 0 1px;
+
+}
 .p-zero .thumbnail{
-    border: 0;
+    /*border: 0;*/
+}
+.date-text{
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+}
+.price-text{
+    font-size: 12px;
+    color: #F00;
+    font-weight: bold;
+}
+.ul-list-style-none{
+    list-style-type: none;
+}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    line-height: 1;
+    width: 100%;
+}
+.m-l-r-zero{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.media-body ul{
+    padding-left: 5px;
 }
