@@ -18,8 +18,8 @@
 					array(
 						 'controller'=>'posts',
 						 'action'=>'view',
-						 'type'=>$type,
-						 $post['Post']['url']
+						 $type,
+                        'url'=>$post['Post']['url']
 					)
 				);
 				?>">
@@ -31,8 +31,8 @@
 						array(
 							 'controller'=>'posts',
 							 'action'=>'view',
-							 'type'=>$type,
-							 $post['Post']['url']
+							 $type,
+                            'url'=>$post['Post']['url']
 						)
 					);
 					?>"><h3><?php echo $post['Post']['title'] ?></h3></a>

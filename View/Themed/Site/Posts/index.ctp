@@ -36,8 +36,8 @@ foreach ($posts as $key => $post) {
 								array(
 									 'controller'=>'posts',
 									 'action'=>'view',
-									 'type'=>$type,
-									 $post['Post']['url']
+									 $type,
+									 'url'=>$post['Post']['url']
 								)
 							);
 							?>">
@@ -48,8 +48,8 @@ foreach ($posts as $key => $post) {
 								array(
 									 'controller'=>'posts',
 									 'action'=>'view',
-									 'type'=>$type,
-									 $post['Post']['url']
+									 $type,
+                                    'url'=>$post['Post']['url']
 								)
 							);
 							?>" title="<?php echo $post['Post']['title'] ?>">

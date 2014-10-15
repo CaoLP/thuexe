@@ -280,4 +280,14 @@ class Post extends AppModel
 		);
 		return $this->find('all',$condition);
 	}
+    public function findPostBySlug($url,$type){
+        $condition = array(
+            'conditions' => array(
+                'Post.type' => $type,
+                'Post.url' => $url,
+                'Post.status' => 1
+            )
+        );
+        return $this->find('first',$condition);
+    }
 }
