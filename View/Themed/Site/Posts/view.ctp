@@ -1,245 +1,220 @@
-<div class="posts view">
-<h2><?php echo __('Post'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created By'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['created_by']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Body'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['body']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Title'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['title']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Excerpt'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['excerpt']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Status'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['status']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Updated'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['updated']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Parent Post'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($post['ParentPost']['title'], array('controller' => 'posts', 'action' => 'view', $post['ParentPost']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Url'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['url']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Type'); ?></dt>
-		<dd>
-			<?php echo h($post['Post']['type']); ?>
-			&nbsp;
-		</dd>
-	</dl>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Post'), array('action' => 'edit', $post['Post']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Post'), array('action' => 'delete', $post['Post']['id']), array(), __('Are you sure you want to delete # %s?', $post['Post']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Post'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Parent Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Car Rental Bookings'), array('controller' => 'car_rental_bookings', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Car Rental Booking'), array('controller' => 'car_rental_bookings', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Postmeta'), array('controller' => 'postmeta', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Postmetum'), array('controller' => 'postmeta', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Tour Schedules'), array('controller' => 'tour_schedules', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Tour Schedule'), array('controller' => 'tour_schedules', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Car Rental Bookings'); ?></h3>
-	<?php if (!empty($post['CarRentalBooking'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Post Id'); ?></th>
-		<th><?php echo __('First Name'); ?></th>
-		<th><?php echo __('Last Name'); ?></th>
-		<th><?php echo __('Email'); ?></th>
-		<th><?php echo __('Phone'); ?></th>
-		<th><?php echo __('Address'); ?></th>
-		<th><?php echo __('Special Requirements'); ?></th>
-		<th><?php echo __('Total Price'); ?></th>
-		<th><?php echo __('Created By'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($post['CarRentalBooking'] as $carRentalBooking): ?>
-		<tr>
-			<td><?php echo $carRentalBooking['id']; ?></td>
-			<td><?php echo $carRentalBooking['post_id']; ?></td>
-			<td><?php echo $carRentalBooking['first_name']; ?></td>
-			<td><?php echo $carRentalBooking['last_name']; ?></td>
-			<td><?php echo $carRentalBooking['email']; ?></td>
-			<td><?php echo $carRentalBooking['phone']; ?></td>
-			<td><?php echo $carRentalBooking['address']; ?></td>
-			<td><?php echo $carRentalBooking['special_requirements']; ?></td>
-			<td><?php echo $carRentalBooking['total_price']; ?></td>
-			<td><?php echo $carRentalBooking['created_by']; ?></td>
-			<td><?php echo $carRentalBooking['created']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'car_rental_bookings', 'action' => 'view', $carRentalBooking['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'car_rental_bookings', 'action' => 'edit', $carRentalBooking['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'car_rental_bookings', 'action' => 'delete', $carRentalBooking['id']), array(), __('Are you sure you want to delete # %s?', $carRentalBooking['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
+<?php
+setlocale (LC_MONETARY, 'vi_VN');
+?>
+<?php
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Car Rental Booking'), array('controller' => 'car_rental_bookings', 'action' => 'add')); ?> </li>
-		</ul>
+$post_metas = Set::combine ($post['Postmetum'], '{n}.meta_key', '{n}');
+$images = array ($post_metas['thumbnail']['meta_value']);
+$temp_img = explode (';', $post_metas['images']['meta_value']);
+$temp_img = array_filter ($temp_img);
+if (count ($temp_img) > 0) $images = $temp_img;
+$start_date = $post_metas['start_date']['meta_value'];
+$temp_array = array ();
+$everyday = false;
+foreach ($start_date as $val) {
+	$temp_array[] = $days_viet[$val];
+	if ($val == 7) $everyday = true;
+}
+?>
+<div class="row">
+	<div class="col-md-12 p-r-15">
+		<a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'index', $type));
+		?>">
+			<h3 class="f-left"><?php echo $type == 'weekly_tour' ? 'TOUR HẰNG TUẦN' : $type == 'daily_tour' ? 'TOUR HẰNG NGÀY' : 'BẢNG BÁO GIÁ'; ?></h3>
+		</a>
 	</div>
 </div>
-<div class="related">
-	<h3><?php echo __('Related Postmeta'); ?></h3>
-	<?php if (!empty($post['Postmetum'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Post Id'); ?></th>
-		<th><?php echo __('Meta Key'); ?></th>
-		<th><?php echo __('Meta Value'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($post['Postmetum'] as $postmetum): ?>
-		<tr>
-			<td><?php echo $postmetum['id']; ?></td>
-			<td><?php echo $postmetum['post_id']; ?></td>
-			<td><?php echo $postmetum['meta_key']; ?></td>
-			<td><?php echo $postmetum['meta_value']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'postmeta', 'action' => 'view', $postmetum['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'postmeta', 'action' => 'edit', $postmetum['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'postmeta', 'action' => 'delete', $postmetum['id']), array(), __('Are you sure you want to delete # %s?', $postmetum['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
+<div class="col-md-9 p-zero">
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Postmetum'), array('controller' => 'postmeta', 'action' => 'add')); ?> </li>
-		</ul>
+	<div class="row">
+		<div class="col-md-12 p-r-15">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<div class="tour-title">
+					<?php echo $post['Post']['title'] ?>
+				</div>
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<?php foreach ($images as $key => $image) {
+						?>
+						<li data-target="#carousel-example-generic" data-slide-to="<?php echo $key; ?>"
+							class="<?php if ($key == 1) echo 'active'; ?>"></li>
+					<?php
+					}?>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<?php foreach ($images as $key => $image) {
+						?>
+						<div class="item <?php if ($key == 1) echo 'active'; ?>">
+							<img src="<?php echo '/' . $this->Image->resizedUrl ($image, 711, 392, 100, WWW_ROOT);; ?>">
+						</div>
+					<?php
+					}?>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+		<?php if (!empty($post['Post']['excerpt'])): ?>
+			<div class="col-md-12 p-r-15">
+				<blockquote>
+					<div class="excerpt-info"><?php echo $post['Post']['excerpt']; ?></div>
+				</blockquote>
+			</div>
+		<?php endif; ?>
 	</div>
+	<div class="row">
+		<div class="col-md-12 p-r-15">
+			<ul class="nav nav-tabs nav-justified" role="tablist">
+				<li class="active"><a href="#c-1" role="tab" data-toggle="tab">Chương trình tour</a></li>
+				<li><a href="#c-2" role="tab" data-toggle="tab">Điều khoản</a></li>
+				<li><a href="#c-3" role="tab" data-toggle="tab">Giá tour</a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="c-1">
+					<?php
+					echo $post['Post']['body'];
+					?>
+				</div>
+				<div class="tab-pane" id="c-2">
+					<?php
+					echo $post_metas['more_info']['meta_value'];
+					?>
+				</div>
+				<div class="tab-pane" id="c-3">
+					<?php
+					echo $post_metas['price_info']['meta_value'];
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php
+	echo $this->element ('contact_info');
+	?>
 </div>
-<div class="related">
-	<h3><?php echo __('Related Posts'); ?></h3>
-	<?php if (!empty($post['ChildPost'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Created By'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Body'); ?></th>
-		<th><?php echo __('Title'); ?></th>
-		<th><?php echo __('Excerpt'); ?></th>
-		<th><?php echo __('Status'); ?></th>
-		<th><?php echo __('Updated'); ?></th>
-		<th><?php echo __('Parent Id'); ?></th>
-		<th><?php echo __('Url'); ?></th>
-		<th><?php echo __('Type'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($post['ChildPost'] as $childPost): ?>
-		<tr>
-			<td><?php echo $childPost['id']; ?></td>
-			<td><?php echo $childPost['created_by']; ?></td>
-			<td><?php echo $childPost['created']; ?></td>
-			<td><?php echo $childPost['body']; ?></td>
-			<td><?php echo $childPost['title']; ?></td>
-			<td><?php echo $childPost['excerpt']; ?></td>
-			<td><?php echo $childPost['status']; ?></td>
-			<td><?php echo $childPost['updated']; ?></td>
-			<td><?php echo $childPost['parent_id']; ?></td>
-			<td><?php echo $childPost['url']; ?></td>
-			<td><?php echo $childPost['type']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'posts', 'action' => 'view', $childPost['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'posts', 'action' => 'edit', $childPost['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'posts', 'action' => 'delete', $childPost['id']), array(), __('Are you sure you want to delete # %s?', $childPost['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
+<div class="col-md-3 p-zero">
+	<div class="panel panel-default tour-right-panel">
+		<!-- Default panel contents -->
+		<div class="panel-heading header-style">Khởi hành
+			từ <?php echo $post_metas['startlocate']['meta_value']; ?></div>
+		<div class="panel-body">
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Child Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Tour Schedules'); ?></h3>
-	<?php if (!empty($post['TourSchedule'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Post Id'); ?></th>
-		<th><?php echo __('Start Date'); ?></th>
-		<th><?php echo __('Duration Days'); ?></th>
-		<th><?php echo __('Price'); ?></th>
-		<th><?php echo __('Price Child'); ?></th>
-		<th><?php echo __('Max People'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($post['TourSchedule'] as $tourSchedule): ?>
-		<tr>
-			<td><?php echo $tourSchedule['id']; ?></td>
-			<td><?php echo $tourSchedule['post_id']; ?></td>
-			<td><?php echo $tourSchedule['start_date']; ?></td>
-			<td><?php echo $tourSchedule['duration_days']; ?></td>
-			<td><?php echo $tourSchedule['price']; ?></td>
-			<td><?php echo $tourSchedule['price_child']; ?></td>
-			<td><?php echo $tourSchedule['max_people']; ?></td>
-			<td><?php echo $tourSchedule['created']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'tour_schedules', 'action' => 'view', $tourSchedule['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'tour_schedules', 'action' => 'edit', $tourSchedule['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'tour_schedules', 'action' => 'delete', $tourSchedule['id']), array(), __('Are you sure you want to delete # %s?', $tourSchedule['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
+			<ul class="ul-list-style-none tour-right-details">
+				<li>
+					<table>
+						<tbody>
+						<tr>
+							<td><strong>Thời gian:</strong></td>
+							<td>
+								<?php
+								echo $days_vi[$post_metas['total_days']['meta_value']];
+								if (!empty($post_metas['total_nights']['meta_value']))
+									echo ' ' . $nights_vi[$post_metas['total_nights']['meta_value']];
+								?>
+							</td>
+						</tr>
+						<tr>
+							<td><strong>Giá từ:</strong></td>
+							<td>
+								<span class="price-text"><?php echo money_format ('%.0n', $post_metas['price']['meta_value']) ?></span>
+							</td>
+						</tr>
+						<tr>
+							<td><strong>Phương tiện:</strong></td>
+							<td><?php echo $post_metas['transport']['meta_value']; ?></td>
+						</tr>
+						<tr>
+							<td><strong>Khởi hành:</strong></td>
+							<td>
+								<?php
+								echo implode (', ', $temp_array);
+								?>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</li>
+				<li><br></li>
+				<li><strong>Tư vấn:</strong></li>
+				<li><br></li>
+				<li><img src="http://cdn.dulichhe.com/images/2014/ban-muon-sgt-goi-lai.gif" width="239" height="50">
+				</li>
+			</ul>
+		</div>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Tour Schedule'), array('controller' => 'tour_schedules', 'action' => 'add')); ?> </li>
-		</ul>
 	</div>
+	<div class="panel panel-default tour-right-panel">
+		<!-- Default panel contents -->
+		<div class="panel-heading header-style">Giá & lịch khởi hành</div>
+		<div class="panel-body">
+			<table>
+				<thead>
+				<tr>
+					<th style="width: 35%;" class="text-center">Ngày đi</th>
+					<th style="width: 35%;" class="text-center">Giá</th>
+					<th style="width: 30%;" class="text-right">Đặt tour</th>
+				</tr>
+				</thead>
+				<tbody>
+				<?php
+				$total = count ($temp_array);
+				$d = round (15 / $total);
+				$array_dates = array();
+				if(!$everyday){
+					$array_collect = array();
+					foreach($start_date as $val){
+						$array_collect[] = strtotime('next '. $days_en[$val]);
+					}
+					sort($array_collect,SORT_NUMERIC );
+
+				}
+				for($i = 0; $i < $d; $i++) {
+					if($everyday){
+						$array_dates[] =strtotime (($i+1) . ' days');
+					}else{
+						foreach($array_collect as $key=>$val){
+							$array_dates[] =  strtotime (($i * 7) . ' days',$val);
+						}
+					}
+				}
+				foreach($array_dates as $val) {
+						?>
+						<tr>
+							<td class="text-center"><span
+										class="date-text"><?php echo date ('d-m-Y', $val) ?></span></td>
+							<td class="text-center"><span
+										class="price-text"><?php echo money_format ('%.0n', $post_metas['price']['meta_value']) ?></span>
+							</td>
+							<td><a href="<?php
+								echo $this->Html->url (
+									array (
+										  'controller' => 'tour_bookings',
+										  'action' => 'add',
+										  '?' => array (
+											  'post_id' => $post['Post']['id'],
+											  'booking_date' => $val
+										  )
+									)
+								);
+								?>" data-id="<?php echo $post['Post']['id'] ?>"
+								   data-date="<?php echo $val ?>"
+								   class="btn-sm btn-success f-right">Đặt tour</a></td>
+						</tr>
+				<?php
+				}
+				?>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+	<?php echo $this->element('home_ads_2')?>
 </div>

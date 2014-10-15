@@ -36,21 +36,8 @@
 	<div class="container">
 
 		<div class="row tour-list">
-			<div class="col-md-9 p-zero">
-				<?php echo $this->fetch('content'); ?>
-			</div>
-			<div class="col-md-3 p-zero">
-				<div class="list-group">
-					<a href="#" class="list-group-item">
-						Cras justo odio
-					</a>
-					<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-					<a href="#" class="list-group-item">Morbi leo risus</a>
-					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-					<a href="#" class="list-group-item">Vestibulum at eros</a>
-				</div>
-				<img src="http://cdn.dulichhe.com/images/2014/banner-tour-rieng.gif">
-			</div>
+			<?php echo $this->fetch('content'); ?>
+
 		</div>
 		<?php
 			echo $this->element('footer');

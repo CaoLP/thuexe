@@ -15,6 +15,16 @@ class TourBookingsController extends AppController {
  */
 	public $components = array('Paginator');
 
+
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('add');
+	}
 /**
  * index method
  *
@@ -46,17 +56,26 @@ class TourBookingsController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->TourBooking->create();
-			if ($this->TourBooking->save($this->request->data)) {
-				$this->Session->setFlash(__('The tour booking has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The tour booking could not be saved. Please, try again.'));
+		if(isset($this->request->query['post_id']) && isset($this->request->query['booking_date'])){
+			$post_id = $this->request->query['post_id'];
+			$booking_date = $this->request->query['booking_date'];
+			if ($this->request->is('post')) {
+				$this->TourBooking->create();
+				if ($this->TourBooking->save($this->request->data)) {
+					$this->Session->setFlash(__('The tour booking has been saved.'));
+					return $this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('The tour booking could not be saved. Please, try again.'));
+				}
 			}
+			$tour = $this->TourBooking->Tour->find('first',array(
+																		 'conditions'=>array('Tour.id'=>$post_id)
+																	));
+			$this->set(compact('tour','booking_date','post_id'));
+
+		}else{
+			return $this->redirect(array('action' => 'index'));
 		}
-		$tourSchedules = $this->TourBooking->TourSchedule->find('list');
-		$this->set(compact('tourSchedules'));
 	}
 
 /**

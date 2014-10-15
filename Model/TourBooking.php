@@ -14,8 +14,8 @@ class TourBooking extends AppModel {
  */
 	public $validate = array(
 		'tour_date' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
+			'date' => array(
+				'rule' => array('date'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -83,8 +83,8 @@ class TourBooking extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'TourSchedule' => array(
-			'className' => 'TourSchedule',
+		'Tour' => array(
+			'className' => 'Post',
 			'foreignKey' => 'tour_schedule_id',
 			'conditions' => '',
 			'fields' => '',

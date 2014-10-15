@@ -31,7 +31,7 @@ setlocale(LC_MONETARY, 'vi_VN')
                         );
                         ?>" title="<?php echo $feature['Post']['title'] ?>">
                             <img
-                                src="<?php echo $this->Image->resizedUrl($post_metas['thumbnail']['meta_value'], 235, 150, 100, WWW_ROOT); ?>"
+                                src="<?php echo '/'.$this->Image->resizedUrl($post_metas['thumbnail']['meta_value'], 235, 150, 100, WWW_ROOT); ?>"
                                 alt="<?php echo $feature['Post']['title'] ?>">
                         </a>
 
@@ -84,7 +84,7 @@ setlocale(LC_MONETARY, 'vi_VN')
                     );
                     ?>">
                         <img
-                            src="<?php echo $this->Image->resizedUrl($post_metas['thumbnail']['meta_value'], 235, 150, 100, WWW_ROOT); ?>"
+                            src="<?php echo '/'.$this->Image->resizedUrl($post_metas['thumbnail']['meta_value'], 235, 150, 100, WWW_ROOT); ?>"
                             alt="<?php echo $post['Post']['title'] ?>">
                     </a>
 
@@ -111,16 +111,8 @@ setlocale(LC_MONETARY, 'vi_VN')
 
     </div>
     <div class="col-md-3 p-zero">
-        <div class="list-group">
-            <a href="#" class="list-group-item">
-                Cras justo odio
-            </a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-        </div>
-    </div>
+		<?php echo $this->element('home_ads_1')?>
+	</div>
 </div>
 <div class="row">
     <div class="col-md-9 p-zero">
@@ -192,6 +184,6 @@ setlocale(LC_MONETARY, 'vi_VN')
         </div>
     </div>
     <div class="col-md-3 p-zero">
-        <img src="http://cdn.dulichhe.com/images/2014/banner-tour-rieng.gif">
+		<?php echo $this->element('home_ads_2')?>
     </div>
 </div>

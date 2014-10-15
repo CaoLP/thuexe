@@ -14,19 +14,19 @@
 		?> w-t"><a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'car_rental')); ?>">THÔNG
 				TIN XE</a></li>
 		<li class="<?php
-		if (isset($this->request->pass[0]) && $this->request->pass[0] == 'rental_option')
+		if (isset($type) && $type == 'rental_option')
 			echo 'active';
 		?> w-t">
 			<a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'index', 'rental_option')); ?>">BÁO
 				GIÁ XE</a></li>
 		<li class="<?php
-		if (isset($this->request->pass[0]) && $this->request->pass[0] == 'daily_tour')
+		if (isset($type) && $type == 'daily_tour')
 			echo 'active';
 		?> w-t">
 			<a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'index', 'daily_tour')); ?>">TOUR
 				HẰNG NGÀY</a></li>
 		<li class="<?php
-		if (isset($this->request->pass[0]) && $this->request->pass[0] == 'weekly_tour')
+		if (isset($type) && $type == 'weekly_tour')
 			echo 'active';
 		?> w-t">
 			<a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'index', 'weekly_tour')); ?>">TOUR

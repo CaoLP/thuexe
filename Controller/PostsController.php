@@ -85,7 +85,9 @@ class PostsController extends AppController
     public function view($url = '', $type='')
     {
         $post = $this->Post->findPostBySlug($url,$type);
-        $this->set(compact('posts'));
+        $this->set(compact('post','type'));
+		if($type == 'car_rental')
+			$this->view='car_rental_view';
 //        if (!$this->Post->exists($id)) {
 //            throw new NotFoundException(__('Invalid post'));
 //        }

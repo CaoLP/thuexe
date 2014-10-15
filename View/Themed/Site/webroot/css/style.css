@@ -221,3 +221,45 @@
     word-wrap: normal;
     text-align: left;
 }
+
+.tour-right-details{
+    padding-left: 0px;
+}
+.tour-right-details li{
+    font-size: 12px;
+}
+.tour-right-panel{
+    border: none;
+    box-shadow: none;
+}
+.tour-right-panel .panel-body{
+    padding: 5px;
+}
+.tour-right-panel .panel-heading{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #0a69a6;
+    border-right: 20px solid #fff200;
+}
+.tour-title {
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.25);
+    top: 0;
+    font-size: 18px;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow: 1px 1px #333;
+    width: 100%;
+}
+.excerpt-info {
+    font-size: 14px;
+    color: #000;
+    font-family: 'Noticia Text', serif;
+    font-style: italic;
+    padding: 5px;
+}
