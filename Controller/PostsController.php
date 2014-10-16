@@ -72,7 +72,9 @@ class PostsController extends AppController
 				'Post.status' => 1
 			)
 		);
-		$this->set(compact('type'));
+		$this->loadModel('CarType');
+		$carTypes= $this->CarType->find('list');
+		$this->set(compact('type','carTypes'));
 		$this->set('posts', $this->Paginator->paginate());
 	}
     /**
@@ -86,8 +88,12 @@ class PostsController extends AppController
     {
         $post = $this->Post->findPostBySlug($url,$type);
         $this->set(compact('post','type'));
-		if($type == 'car_rental')
+		if($type == 'car_rental'){
 			$this->view='car_rental_view';
+			$this->loadModel('CarType');
+			$carTypes= $this->CarType->find('list');
+			$this->set(compact('carTypes'));
+		}
 //        if (!$this->Post->exists($id)) {
 //            throw new NotFoundException(__('Invalid post'));
 //        }
@@ -285,6 +291,9 @@ class PostsController extends AppController
         switch ($type) {
             case 'car_rental':
                 $this->title_for_layout = 'Xe cho thuê';
+				$this->loadModel('CarType');
+				$carTypes= $this->CarType->find('list');
+				$this->set(compact('carTypes'));
                 break;
             case 'daily_tour':
                 $this->title_for_layout = 'Tour hằng ngày';

@@ -32,7 +32,8 @@ class Postmetum extends AppModel {
     public function afterFind($results, $primary = false){
         $temp = array();
         foreach($results as $key=>$val){
-            $subtemp = $val;
+			$subtemp = $val;
+			if(isset($subtemp[$this->alias]))
             $subtemp[$this->alias]['meta_value'] = json_decode($val[$this->alias]['meta_value']);
             $temp[$key] = $subtemp;
         }

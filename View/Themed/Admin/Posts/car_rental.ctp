@@ -4,9 +4,19 @@ if (!isset($arrayFields)) {
     $arrayFields = array(
         'modem' => 0,
         'thumbnail' => 1,
-        'images' => 2
+        'images' => 2,
+        'car_type' => 3
     );
     $edit = false;
+}else{
+	$arrayFields1 = array(
+		'modem' => 0,
+		'thumbnail' => 1,
+		'images' => 2,
+		'car_type' => 3
+	);
+	$notIsset = array_diff(array_keys($arrayFields1),array_keys($arrayFields));
+	$arrayFields = array_merge($arrayFields1,$arrayFields);
 }
 ?>
 <script>
@@ -147,13 +157,14 @@ $this->Html->scriptEnd();
                             <?php
 
                             echo $this->Form->hidden('id');
-                            foreach ($arrayFields as $val) {
+                            foreach ($arrayFields as $key=>$val) {
                                 $id = '';
                                 if (isset($this->request->data['Post']['id'])) {
                                     $id = $this->request->data['Post']['id'];
                                 };
                                 if ($edit)
-                                    echo $this->Form->hidden('Postmetum.' . $val . '.id', array('value' => $val));
+									if(!in_array($key,$notIsset))
+                                    	echo $this->Form->hidden('Postmetum.' . $val . '.id', array('value' => $val));
                                 echo $this->Form->hidden('Postmetum.' . $val . '.post_id', array('value' => $id));
                             }
                             $this->Form->inputDefaults(array(
@@ -177,6 +188,15 @@ $this->Html->scriptEnd();
                                     'type' => 'text',
                                 )
                             );
+							echo $this->Form->hidden('Postmetum.' . $arrayFields['car_type'] . '.meta_key',
+													 array('value' => 'car_type'));
+							echo $this->Form->input('Postmetum.' . $arrayFields['car_type'] . '.meta_value',
+													array(
+														 'label' => array('text' => 'Loại xe'),
+														 'type' => 'select',
+														 'options'=>$carTypes
+													)
+							);
                             echo $this->Form->input('excerpt', array('label' => array('text' => 'Mô tả ngắn')));
                             echo $this->Form->input('body', array('label' => array('text' => 'Nội dung')));
                             ?>

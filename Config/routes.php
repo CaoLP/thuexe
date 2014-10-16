@@ -33,7 +33,7 @@ Router::connect('/tour-hang-tuan/:url', array('controller' => 'posts', 'action' 
     array('pass' => array(
         'url'
     )));
-Router::connect('/lien-he', array('controller' => 'contact', 'action' => 'contact'));
+Router::connect('/lien-he', array('controller' => 'contacts', 'action' => 'contact'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

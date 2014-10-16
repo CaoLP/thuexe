@@ -100,7 +100,7 @@ class CaptchaComponent extends Component{
      *
      * @var bool
      */
-    private $sessionKey = 'Signup.captcha';
+    private $sessionKey = 'Captcha.captcha';
 
     /**
      * The default theme/texture on image, behind the captcha text
@@ -393,6 +393,7 @@ class CaptchaComponent extends Component{
         } else if($this->__getType()=='math')  {
           return $this->Controller->Session->read('Captcha.{$sessionKey}_math');
         }*/
+
         $sessionKey = str_replace('.', '_', $sessionKey);
         return $this->Session->read("Captcha.{$sessionKey}");
     }

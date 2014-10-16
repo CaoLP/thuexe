@@ -43,13 +43,13 @@ $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
                 </div>
 
                 <?php echo $this->Form->create('TourBooking', array('class' => 'form-horizontal')); ?>
+				<div class="row">
                 <div class="col-md-5">
                     <?php
                     $this->Form->inputDefaults(array(
                         'div' => array('class' => 'form-group'),
                         'class' => 'form-control'
                     ));
-
                     echo $this->Form->input('name', array('label' => array('text' => 'Tên')));
                     echo $this->Form->input('email');
                     echo $this->Form->input('phone', array('label' => array('text' => 'Số điện thoại')));
@@ -68,10 +68,25 @@ $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
                     echo $this->Form->input('special_requirements', array('label' => array('text' => 'Yêu cầu đi kèm')));
                     echo $this->Form->hidden('price', array('value' => $post_metas['price']['meta_value']));
                     echo $this->Form->hidden('t_price', array('value' => $post_metas['price_translate']['meta_value']));
-                    echo $this->Form->submit(__('Đặt tour'), array('class' => 'pull-right btn btn-primary'));
                     ?>
 
                 </div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<?php
+						$this->Captcha->render(array('model'=>'TourBooking','clabel'=>'Mã bảo mật','reload_txt'=>'Mã số khác'));
+						?>
+					</div>
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-5">
+						<?php
+						echo $this->Form->submit(__('Đặt tour'), array('class' => 'pull-right btn btn-primary form-control'));
+						?>
+					</div>
+
+				</div>
                 <?php echo $this->Form->end(); ?>
             </div>
             <hr>
@@ -82,3 +97,18 @@ $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
     <?php echo $this->element('home_ads_1') ?>
     <?php echo $this->element('home_ads_2') ?>
 </div>
+<?php
+$this->Html->scriptStart(array('inline' => false));
+?>
+	jQuery('.creload').on('click', function() {
+	var mySrc = $(this).prev().attr('src');
+	var glue = '?';
+	if(mySrc.indexOf('?')!=-1)  {
+	glue = '&';
+	}
+	$(this).prev().attr('src', mySrc + glue + new Date().getTime());
+	return false;
+	});
+<?php
+$this->Html->scriptEnd();
+?>

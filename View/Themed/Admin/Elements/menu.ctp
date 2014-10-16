@@ -29,6 +29,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $this->Html->url(array('controller'=>'posts','action'=>'index','car_rental'))?>">Xe</a></li>
                             <li><a href="<?php echo $this->Html->url(array('controller'=>'posts','action'=>'index','rental_option'))?>">Chặn đi</a></li>
+                            <li><a href="<?php echo $this->Html->url(array('controller'=>'car_types','action'=>'index'))?>">Loại xe</a></li>
                         </ul>
                     </li>
                     <li class="">

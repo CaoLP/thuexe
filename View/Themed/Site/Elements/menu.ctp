@@ -34,7 +34,7 @@
 		<li class="<?php
 		if ($this->request->action == 'contact')
 			echo 'active';
-		?> w-t"><a href="<?php echo $this->Html->url (array ('controller' => 'contact', 'action' => 'contact')); ?>">LIÊN
+		?> w-t"><a href="<?php echo $this->Html->url (array ('controller' => 'contacts', 'action' => 'contact')); ?>">LIÊN
 				HỆ</a></li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">

@@ -93,12 +93,12 @@ if (count ($temp_img) > 0) $images = $temp_img;
 						<tr>
 							<td><strong>Đời xe:</strong></td>
 							<td>
-								<span class="price-text"><?php echo$post_metas['modem']['meta_value'] ?></span>
+								<span><?php echo$post_metas['modem']['meta_value'] ?></span>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>Loại xe:</strong></td>
-							<td></td>
+							<td><span><?php echo $carTypes[$post_metas['car_type']['meta_value']] ?></span></td>
 						</tr>
 						</tbody>
 					</table>

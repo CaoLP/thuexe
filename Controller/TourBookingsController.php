@@ -26,9 +26,15 @@ class TourBookingsController extends AppController
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        $this->Auth->allow('add','captcha');
     }
 
+
+	function  captcha()  {
+		$this->autoRender = false;
+		$this->layout='ajax';
+		$this->Captcha->create();
+	}
     /**
      * index method
      *
@@ -67,12 +73,19 @@ class TourBookingsController extends AppController
             $post_id = $this->request->query['post_id'];
             $booking_date = $this->request->query['booking_date'];
             if ($this->request->is('post')) {
-                if(isset($this->request->data['P']['accept'])){
-                    $this->TourBooking->create();
-                    if ($this->TourBooking->save($this->request->data)) {}
-                    $this->view = 'complete';
-                }else
-                    $this->view = 'confirm';
+				$this->TourBooking->setCaptcha('security_code', $this->Captcha->getCode('TourBooking.security_code'));
+				$this->TourBooking->set($this->request->data);
+				if($this->TourBooking->validates())  {
+					if(isset($this->request->data['P']['accept'])){
+						$this->TourBooking->create();
+						if ($this->TourBooking->save($this->request->data)) {}
+						$this->view = 'complete';
+					}else
+						$this->view = 'confirm';
+				}else    { //or
+					$this->Session->setFlash('Dữ liệu nhập đặt tour không đúng', 'default', array('class' =>'cake-error'));
+					//validation not passed, do something else
+				}
             }
             $tour = $this->TourBooking->Tour->find('first', array(
                 'conditions' => array('Tour.id' => $post_id)

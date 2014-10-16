@@ -4,9 +4,13 @@
 $this->Html->addCrumb ($title_for_layout, array ('action' => 'index'));
 
 if ($this->request->params['action'] == 'admin_add') {
-    $this->Html->addCrumb (__('New ') . (isset($type)?$type:'CarType'), '/'.$this->request->url);
+
+    $this->Html->addCrumb (__('New ') . (isset($type)?$type:'Contact'), '/'.$this->request->url);
+
 } else {
-    $this->Html->addCrumb ($this->request->data['CarType']['name'], '/'.$this->request->url);
+
+    $this->Html->addCrumb ($this->request->data['Contact']['name'], '/'.$this->request->url);
+
 }
 
 ?>
@@ -16,22 +20,22 @@ if ($this->request->params['action'] == 'admin_add') {
 
         <div class="widget-header">
             <i class="icon-user"></i>
-            <h3><?php echo isset($title_for_layout)?$title_for_layout:'CarType'; ?></h3>
+            <h3><?php echo isset($title_for_layout)?$title_for_layout:'Contact'; ?></h3>
         </div>
         <!-- /widget-header -->
         <div class="widget-content">
             <div class="tabbable">
                 <ul class="nav nav-tabs">
                     <li class="active">
-                        <a href="#carTypes" data-toggle="tab"><?php echo __('Contents'); ?></a>
+                        <a href="#Contacts" data-toggle="tab"><?php echo __('Contents'); ?></a>
                     </li>
                 </ul>
                 <br>
 
                 <div class="tab-content">
-                    <div class="tab-pane active" id="carTypes">
+                    <div class="tab-pane active" id="Contacts">
                         <div class="posts">
-                            <?php echo $this->Form->create('CarType', array('class' => 'col-md-12')); ?>
+                            <?php echo $this->Form->create('Contact', array('class' => 'col-md-12')); ?>
                             	<?php
 $this->Form->inputDefaults (array (
 
@@ -40,6 +44,7 @@ $this->Form->inputDefaults (array (
                                 'class'=>'form-control'
 
                             ));
+		echo $this->Form->input('id');
 		echo $this->Form->input('name');
 	?>
                         </div>

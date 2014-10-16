@@ -46,6 +46,7 @@ class CarTypesController extends AppController {
  * @return void
  */
 	public function admin_add() {
+		$type = 'Loại xe';
 		if ($this->request->is('post')) {
 			$this->CarType->create();
 			if ($this->CarType->save($this->request->data)) {
@@ -55,6 +56,7 @@ class CarTypesController extends AppController {
 				$this->Session->setFlash(__('The car type could not be saved. Please, try again.'));
 			}
 		}
+		$this->set(compact('type'));
 	}
 
 /**
@@ -68,6 +70,7 @@ class CarTypesController extends AppController {
 		if (!$this->CarType->exists($id)) {
 			throw new NotFoundException(__('Invalid car type'));
 		}
+		$type = 'Loại xe';
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->CarType->save($this->request->data)) {
 				$this->Session->setFlash(__('The car type has been saved.'));
@@ -79,6 +82,7 @@ class CarTypesController extends AppController {
 			$options = array('conditions' => array('CarType.' . $this->CarType->primaryKey => $id));
 			$this->request->data = $this->CarType->find('first', $options);
 		}
+		$this->set(compact('type'));
 	}
 
 /**

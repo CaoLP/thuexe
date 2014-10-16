@@ -87,7 +87,7 @@ class CaptchaBehavior extends ModelBehavior
      * (non-PHPdoc)
      * @see ModelBehavior::beforeValidate()
      */
-    public function beforeValidate(Model $model) {
+    public function beforeValidate(Model $model,$options=array()) {
         $validator = array(
             'rule' => array('validateCaptcha'),
             'message' => $this->_config[$model->alias]['error']
@@ -102,7 +102,6 @@ class CaptchaBehavior extends ModelBehavior
         foreach ($fields as $field) {
             $rules[$field] = $validator;
         }
-
         $model->validate = array_merge($this->_rules[$model->alias], $rules);
     }
 

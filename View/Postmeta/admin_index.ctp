@@ -35,7 +35,13 @@
 			<?php echo $this->Html->link($postmetum['Post']['title'], array('controller' => 'posts', 'action' => 'view', $postmetum['Post']['id'])); ?>
 		</td>
 		<td><?php echo h($postmetum['Postmetum']['meta_key']); ?>&nbsp;</td>
-		<td><?php echo h($postmetum['Postmetum']['meta_value']); ?>&nbsp;</td>
+		<td><?php
+			if(is_array($postmetum['Postmetum']['meta_value']))
+				echo h(json_encode($postmetum['Postmetum']['meta_value']));
+			else
+			echo h($postmetum['Postmetum']['meta_value']);
+
+			?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $postmetum['Postmetum']['id']),array('escape' => false,'title'=>__('View'))); ?>
 			<?php echo $this->Html->link('<i class="icon-edit"></i>', array('action' => 'edit', $postmetum['Postmetum']['id']), array('escape' => false,'title'=>__('Edit'))); ?>

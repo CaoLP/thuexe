@@ -1,3 +1,9 @@
+<?php
+$status = array(
+	'Chưa giải quyết',
+	'Đã giải quyết',
+);
+?>
 <div class="col-md-12">
 
     <div class="widget stacked">
@@ -23,16 +29,16 @@
                                                             <th><?php echo $this->Paginator->sort('id'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('tour_schedule_id'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('tour_date'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('first_name'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('last_name'); ?></th>
+                                                            <th><?php echo $this->Paginator->sort('name'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('email'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('phone'); ?></th>
+                                                            <th><?php echo $this->Paginator->sort('phone1'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('address'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('adults'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('childs'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('special_requirements'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('total_price'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('created_by'); ?></th>
+                                                            <th><?php echo $this->Paginator->sort('price'); ?></th>
+                                                            <th><?php echo $this->Paginator->sort('t_price'); ?></th>
+                                                            <th><?php echo $this->Paginator->sort('status'); ?></th>
                                                             <th><?php echo $this->Paginator->sort('created'); ?></th>
                                                         <th class="actions"><?php echo __('Actions'); ?></th>
                         </tr>
@@ -42,19 +48,19 @@
 	<tr>
 		<td><?php echo h($tourBooking['TourBooking']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($tourBooking['TourSchedule']['id'], array('controller' => 'tour_schedules', 'action' => 'view', $tourBooking['TourSchedule']['id'])); ?>
+			<?php echo $this->Html->link($tourBooking['Tour']['id'], array('controller' => 'posts', 'action' => 'view', $tourBooking['Tour']['id'])); ?>
 		</td>
 		<td><?php echo h($tourBooking['TourBooking']['tour_date']); ?>&nbsp;</td>
-		<td><?php echo h($tourBooking['TourBooking']['first_name']); ?>&nbsp;</td>
-		<td><?php echo h($tourBooking['TourBooking']['last_name']); ?>&nbsp;</td>
+		<td><?php echo h($tourBooking['TourBooking']['name']); ?>&nbsp;</td>
 		<td><?php echo h($tourBooking['TourBooking']['email']); ?>&nbsp;</td>
 		<td><?php echo h($tourBooking['TourBooking']['phone']); ?>&nbsp;</td>
+		<td><?php echo h($tourBooking['TourBooking']['phone1']); ?>&nbsp;</td>
 		<td><?php echo h($tourBooking['TourBooking']['address']); ?>&nbsp;</td>
 		<td><?php echo h($tourBooking['TourBooking']['adults']); ?>&nbsp;</td>
 		<td><?php echo h($tourBooking['TourBooking']['childs']); ?>&nbsp;</td>
-		<td><?php echo h($tourBooking['TourBooking']['special_requirements']); ?>&nbsp;</td>
-		<td><?php echo h($tourBooking['TourBooking']['total_price']); ?>&nbsp;</td>
-		<td><?php echo h($tourBooking['TourBooking']['created_by']); ?>&nbsp;</td>
+		<td><?php echo h($tourBooking['TourBooking']['price']); ?>&nbsp;</td>
+		<td><?php echo h($tourBooking['TourBooking']['t_price']); ?>&nbsp;</td>
+		<td><?php echo h($status[$tourBooking['TourBooking']['t_price']]); ?>&nbsp;</td>
 		<td><?php echo h($tourBooking['TourBooking']['created']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $tourBooking['TourBooking']['id']),array('escape' => false,'title'=>__('View'))); ?>
