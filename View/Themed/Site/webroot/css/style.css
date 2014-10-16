@@ -177,6 +177,9 @@
     padding: 1px 15px 0 1px;
 
 }
+.p-l-15{
+    padding-left: 15px;
+}
 .p-zero .thumbnail{
     /*border: 0;*/
 }
