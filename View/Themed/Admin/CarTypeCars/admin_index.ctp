@@ -9,61 +9,79 @@
         </div>
         <!-- /widget-header -->
         <div class="widget-content">
+            <?php echo $this->Form->create('CarTypeCar'); ?>
             <div class="col-lg-12">
-
-                <a href="<?php echo $this->Html->url(array('action' => 'add')); ?>"
-                   class="btn btn-primary">Add new</a>
-            </div>
-            <div class="col-lg-12">
-
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                         <tr>
-                                                            <th><?php echo $this->Paginator->sort('id'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('post_id'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('car_type_id'); ?></th>
-                                                            <th><?php echo $this->Paginator->sort('price'); ?></th>
-                                                        <th class="actions"><?php echo __('Actions'); ?></th>
+                            <th></th>
+                            <?php
+                            foreach ($car_types as $type) {
+                                echo '<th>' . $type . '</th>';
+                            }
+                            ?>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($carTypeCars as $carTypeCar): ?>
-	<tr>
-		<td><?php echo h($carTypeCar['CarTypeCar']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($carTypeCar['Post']['title'], array('controller' => 'posts', 'action' => 'view', $carTypeCar['Post']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($carTypeCar['CarType']['name'], array('controller' => 'car_types', 'action' => 'view', $carTypeCar['CarType']['id'])); ?>
-		</td>
-		<td><?php echo h($carTypeCar['CarTypeCar']['price']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $carTypeCar['CarTypeCar']['id']),array('escape' => false,'title'=>__('View'))); ?>
-			<?php echo $this->Html->link('<i class="icon-edit"></i>', array('action' => 'edit', $carTypeCar['CarTypeCar']['id']), array('escape' => false,'title'=>__('Edit'))); ?>
-			<?php echo $this->Form->postLink('<i class="icon-trash"></i>', array('action' => 'delete', $carTypeCar['CarTypeCar']['id']), array('escape' => false,'title'=>__('Delete')), __('Are you sure you want to delete # %s?', $carTypeCar['CarTypeCar']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
+                        <?php
+                        $count =0;
+                        foreach ($rental_options as $post_id=>$rental_option) {
+                            ?>
+                            <tr>
+                                <td><?php echo $rental_option; ?></td>
+                                <?php
+                                foreach ($car_types as $type_id=>$type) {
+                                    echo '<td>';
+                                    $price = 0;
+                                    if(in_array($post_id.'_'.$type_id,array_keys($carTypeCars))){
+                                        $price = $carTypeCars[$post_id.'_'.$type_id]['CarTypeCar']['price'];
+                                        echo $this->Form->hidden($count.'.id',array('value'=>$carTypeCars[$post_id.'_'.$type_id]['CarTypeCar']['id']));
+                                    }
+                                    echo $this->Form->input($count.'.price',
+                                        array(
+                                            'div' => false,
+                                            'label' => false,
+                                            'required'=>false,
+                                            'class'=>'num-only',
+                                            'type'=>'text',
+                                            'value'=>$price
+                                        )
+                                    );
+                                    echo $this->Form->hidden($count.'.post_id',array('value'=>$post_id));
+                                    echo $this->Form->hidden($count.'.car_type_id',array('value'=>$type_id));
+                                    echo '</td>';
+                                    $count++;
+                                }
+                                ?>
+                            </tr>
+                        <?php
+                        }
+                        ?>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="col-lg-12">
-                <p>
-                <?php
-                            echo $this->Paginator->counter(array(
-                            'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-                            ));
-                            ?>                </p>
-                <div class="paging">
-                    <?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+                <div class="form-group">
+                    <?php echo $this->Form->button('Save', array('class' => 'btn btn-primary btn-support-ask form-control')); ?>
                 </div>
             </div>
+            <?php echo $this->Form->end(); ?>
         </div>
     </div>
 </div>
+<?php
+$this->Html->scriptStart(array('inline' => false));
+?>
+$(document).ready(function(){
+    $('.num-only').on('change',function(){
+        $(this).val($(this).val().replace(/[^0-9\\.]+/g, ""));
+    });
+    $('.num-only').on('keyup',function(){
+        $(this).val($(this).val().replace(/[^0-9\\.]+/g, ""));
+    });
+});
+<?php
+$this->Html->scriptEnd();
+?>

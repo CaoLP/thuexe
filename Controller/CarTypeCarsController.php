@@ -21,8 +21,23 @@ class CarTypeCarsController extends AppController {
  * @return void
  */
 	public function admin_index() {
-		$this->CarTypeCar->recursive = 0;
-		$this->set('carTypeCars', $this->Paginator->paginate());
+        if ($this->request->is('post')) {
+            $this->CarTypeCar->create();
+            if ($this->CarTypeCar->saveMany($this->request->data['CarTypeCar'])) {
+                $this->Session->setFlash(__('The car type car has been saved.'));
+                return $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash(__('The car type car could not be saved. Please, try again.'));
+            }
+        }
+		$this->CarTypeCar->recursive = -1;
+        $rental_options = $this->CarTypeCar->Post->find('list',array(
+            'conditions'=>array('Post.type'=>'rental_option')
+        ));
+        $car_types = $this->CarTypeCar->CarType->find('list');
+        $carTypeCars = $this->CarTypeCar->find('all');
+        $carTypeCars = Set::combine($carTypeCars,array('{0}_{1}','{n}.CarTypeCar.post_id','{n}.CarTypeCar.car_type_id'),'{n}');
+        $this->set(compact('carTypeCars','rental_options','car_types'));
 	}
 
 /**

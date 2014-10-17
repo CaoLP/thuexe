@@ -32,16 +32,31 @@ class PostsController extends AppController
     public function index($type=null)
     {
         $this->Post->recursive = 1;
-		if ($type != null) {
-			$this->Paginator->settings = array(
-				'conditions' => array(
-					'Post.type' => $type,
-					'Post.status' => 1
-				)
-			);
-		}
-		$this->set(compact('type'));
-        $this->set('posts', $this->Paginator->paginate());
+
+        $this->set(compact('type'));
+        if($type == 'rental_option') {
+            $rental_options = $this->Post->find('list',array(
+                'conditions'=>array('Post.type'=>'rental_option')
+            ));
+
+            $this->loadModel('CarTypeCar');
+            $car_types = $this->CarTypeCar->CarType->find('list');
+            $carTypeCars = $this->CarTypeCar->find('all');
+            $carTypeCars = Set::combine($carTypeCars,array('{0}_{1}','{n}.CarTypeCar.post_id','{n}.CarTypeCar.car_type_id'),'{n}');
+            $this->set(compact('carTypeCars','rental_options','car_types'));
+            $this->view = 'rental_option';
+        }else{
+            if ($type != null) {
+                $this->Paginator->settings = array(
+                    'conditions' => array(
+                        'Post.type' => $type,
+                        'Post.status' => 1
+                    )
+                );
+            }
+            $this->set('posts', $this->Paginator->paginate());
+        }
+
     }
 	/**
 	 * index method

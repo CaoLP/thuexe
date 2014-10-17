@@ -14,7 +14,7 @@ if (!isset($arrayFields)) {
 }
 ?>
 <?php
-$this->Html->addCrumb($title_for_layout, array('action' => 'index'));
+$this->Html->addCrumb($title_for_layout, array('action' => 'index',$type));
 if ($this->request->params['action'] == 'admin_add') {
 
     $this->Html->addCrumb(__('New ') . (isset($type) ? $type : 'Post'), '/' . $this->request->url);
@@ -80,7 +80,7 @@ if ($this->request->params['action'] == 'admin_add') {
 														 'options' => $days_vi,
 													)
 							);
-                            echo $this->Form->hidden('type',array('value'=>$type));
+                            echo $this->Form->hidden('type', array('value' => $type));
                             echo $this->Form->hidden('status',array('value'=>'1'));
                             ?>
                         </div>

@@ -14,16 +14,7 @@ class CarTypeCar extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'price' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
+
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -49,4 +40,13 @@ class CarTypeCar extends AppModel {
 			'order' => ''
 		)
 	);
+
+    public function beforeSave($option=array()){
+        if(isset($this->data[$this->alias]['price'])){
+            if(empty($this->data[$this->alias]['price'])){
+                $this->data[$this->alias]['price'] = 0;
+            }
+        }
+        parent::beforeSave($option);
+    }
 }

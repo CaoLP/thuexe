@@ -27,7 +27,7 @@ if (!isset($arrayFields)) {
 			));?>'
 </script>
 <?php
-$this->Html->addCrumb($title_for_layout, array('action' => 'index'));
+$this->Html->addCrumb($title_for_layout, array('action' => 'index',$type));
 if ($this->request->params['action'] == 'admin_add') {
 
     $this->Html->addCrumb((isset($typeName) ? $$typeName : __('New Post')), '/' . $this->request->url);
