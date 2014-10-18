@@ -20,8 +20,15 @@ class OptionsController extends AppController {
  *
  * @return void
  */
-	public function admin_index() {
+	public function admin_index($group=null) {
 		$this->Option->recursive = 0;
+        if($group!=null)
+        $this->Paginator->settings = array(
+            'conditions'=>array(
+                'Option.group' => $group
+            )
+        );
+        $this->set(compact('group'));
 		$this->set('options', $this->Paginator->paginate());
 	}
 
@@ -45,11 +52,14 @@ class OptionsController extends AppController {
  *
  * @return void
  */
-	public function admin_add() {
+	public function admin_add($group=null) {
+        if(in_array($group,array('ads','slide'))) $this->view = 'ads_slides';
+        $this->set(compact('group'));
 		if ($this->request->is('post')) {
 			$this->Option->create();
 			if ($this->Option->save($this->request->data)) {
 				$this->Session->setFlash(__('The option has been saved.'));
+                $this->Option->writeConfigure();
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The option could not be saved. Please, try again.'));
@@ -64,7 +74,7 @@ class OptionsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function admin_edit($id = null) {
+	public function admin_edit($id = null,$group=null) {
 		if (!$this->Option->exists($id)) {
 			throw new NotFoundException(__('Invalid option'));
 		}

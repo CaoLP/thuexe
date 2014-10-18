@@ -35,15 +35,16 @@ class PostsController extends AppController
 
         $this->set(compact('type'));
         if($type == 'rental_option') {
-            $rental_options = $this->Post->find('list',array(
+            $rental_options = $this->Post->find('all',array(
                 'conditions'=>array('Post.type'=>'rental_option')
             ));
-
+            $opts = Set::combine($rental_options,'{n}.Post.id','{n}.Postmetum.0.meta_value');
+            $rental_options  = Set::combine($rental_options,'{n}.Post.id','{n}.Post.title');
             $this->loadModel('CarTypeCar');
             $car_types = $this->CarTypeCar->CarType->find('list');
             $carTypeCars = $this->CarTypeCar->find('all');
             $carTypeCars = Set::combine($carTypeCars,array('{0}_{1}','{n}.CarTypeCar.post_id','{n}.CarTypeCar.car_type_id'),'{n}');
-            $this->set(compact('carTypeCars','rental_options','car_types'));
+            $this->set(compact('carTypeCars','rental_options','car_types','opts'));
             $this->view = 'rental_option';
         }else{
             if ($type != null) {

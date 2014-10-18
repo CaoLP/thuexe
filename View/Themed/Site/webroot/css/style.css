@@ -301,25 +301,54 @@
 .header-fixed-table{
 
 }
-.header-fixed-table table {
+.header-fixed-table .table-t {
     table-layout: fixed;
     width: 100%;
     *margin-left: -100px;/*ie7*/
 }
-.header-fixed-table td, .header-fixed-table th {
+.header-fixed-table .td, .header-fixed-table .th {
     vertical-align: top;
     border-top: 1px solid #ccc;
-    padding:10px;
     width: 400px;
+    font-size : 11px;
 }
-.header-fixed-table th {
+.header-fixed-table .th {
     position:absolute;
     *position: relative; /*ie7*/
     left:0;
+
+}.header-fixed-table .td {
+     text-align: right;
+     width:92px;
 }
 .header-fixed-table .outer {position:relative}
 .header-fixed-table .inner {
     overflow-x: scroll;
     overflow-y: visible;
     margin-left: 400px;
+}
+
+.will-show{
+    display: none;
+}
+@media (max-width: 768px){
+    .td-responsive{
+    width: 100%;
+    }
+    .will-hide{
+        display: none;
+    }
+    .will-show{
+         display: block;
+     }
+    .will-show th, .will-show td{
+        width: 20%;
+    }
+    .header-fixed-table .inner{
+        margin-left: 0px;
+    }
+    .header-fixed-table .th{
+        position: relative;
+        overflow: scroll;
+    }
 }

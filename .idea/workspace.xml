@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="655f1793-34bd-4fa0-963e-f32991fe961d" name="Default" comment="capcha">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/CarTypeCar.php" afterPath="$PROJECT_DIR$/Model/CarTypeCar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/CarTypeCarsController.php" afterPath="$PROJECT_DIR$/Controller/CarTypeCarsController.php" />
+    <list default="true" id="655f1793-34bd-4fa0-963e-f32991fe961d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller/DashboardController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Themed/Admin/Dashboard/admin_index.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/AppController.php" afterPath="$PROJECT_DIR$/Controller/AppController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Option.php" afterPath="$PROJECT_DIR$/Model/Option.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/OptionsController.php" afterPath="$PROJECT_DIR$/Controller/OptionsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/PostsController.php" afterPath="$PROJECT_DIR$/Controller/PostsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_index.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Posts/car_rental.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Posts/car_rental.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Posts/daily_tour.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Posts/daily_tour.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Posts/rental_option.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Posts/rental_option.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config/routes.php" afterPath="$PROJECT_DIR$/Config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css" afterPath="$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thuexedn.iws" />
@@ -36,48 +39,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CarTypeCarsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/CarTypeCarsController.php">
+      <file leaf-file-name="OptionsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/OptionsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="72" selection-start="1036" selection-end="1346" vertical-scroll-proportion="-13.48" vertical-offset="287" max-vertical-offset="2096">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarTypeCar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/CarTypeCar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="25" selection-start="709" selection-end="709" vertical-scroll-proportion="-4.96" vertical-offset="500" max-vertical-offset="928">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lib/Cake/Model/Model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3675" column="20" selection-start="110800" selection-end="110800" vertical-scroll-proportion="-6.04" vertical-offset="58377" max-vertical-offset="60464">
+            <state line="56" column="33" selection-start="1260" selection-end="1265" vertical-scroll-proportion="-5.4" vertical-offset="761" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="admin_index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_index.ctp">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="108" selection-start="1541" selection-end="1609" vertical-scroll-proportion="-8.04" vertical-offset="391" max-vertical-offset="1472">
-              <folding>
-                <marker date="1413482220895" expanded="true" signature="912:914" placeholder="..." />
-              </folding>
+            <state line="22" column="48" selection-start="754" selection-end="754" vertical-scroll-proportion="-3.84" vertical-offset="256" max-vertical-offset="1168">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_edit.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_edit.ctp">
+      <file leaf-file-name="DashboardController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="44" selection-start="1539" selection-end="1550" vertical-scroll-proportion="-14.68" vertical-offset="401" max-vertical-offset="1200">
+            <state line="7" column="3" selection-start="151" selection-end="151" vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="528">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="97" selection-start="1720" selection-end="1720" vertical-scroll-proportion="-11.68" vertical-offset="124" max-vertical-offset="784">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ads_slides.ctp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="58" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.7105263" vertical-offset="263" max-vertical-offset="1008">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_index.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Dashboard/admin_index.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="192">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Option.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Option.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="30" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1520">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="28" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-38.08" vertical-offset="72" max-vertical-offset="1376">
               <folding />
             </state>
           </provider>
@@ -86,45 +114,7 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="32" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-11.04" vertical-offset="492" max-vertical-offset="5808">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rental_option.ctp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="970" selection-end="970" vertical-scroll-proportion="0.46411484" vertical-offset="206" max-vertical-offset="960">
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="167" selection-start="4207" selection-end="4285" vertical-scroll-proportion="-18.24" vertical-offset="1768" max-vertical-offset="3312">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="car_rental.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/car_rental.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="14" selection-start="281" selection-end="281" vertical-scroll-proportion="-2.4" vertical-offset="52" max-vertical-offset="1184">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="310" column="31" selection-start="5755" selection-end="5755" vertical-scroll-proportion="0.0" vertical-offset="4625" max-vertical-offset="5280">
+            <state line="50" column="51" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="5824">
               <folding />
             </state>
           </provider>
@@ -154,22 +144,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Model/Postmetum.php" />
-        <option value="$PROJECT_DIR$/View/Postmeta/admin_index.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Postmeta/admin_index.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Postmeta/admin_edit.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Site/Posts/car_rental_view.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/rental_option.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/car_rental.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/daily_tour.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" />
-        <option value="$PROJECT_DIR$/Model/CarTypeCar.php" />
-        <option value="$PROJECT_DIR$/Controller/CarTypeCarsController.php" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_index.ctp" />
-        <option value="$PROJECT_DIR$/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css" />
+        <option value="$PROJECT_DIR$/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" />
+        <option value="$PROJECT_DIR$/Lib/Cake/Core/Configure.php" />
+        <option value="$PROJECT_DIR$/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/Config/core.php" />
+        <option value="$PROJECT_DIR$/Model/Option.php" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp" />
+        <option value="$PROJECT_DIR$/Controller/Dashboard.php" />
+        <option value="$PROJECT_DIR$/Controller/DashboardController.php" />
+        <option value="$PROJECT_DIR$/Config/routes.php" />
+        <option value="$PROJECT_DIR$/Controller/OptionsController.php" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp" />
       </list>
     </option>
   </component>
@@ -317,144 +307,6 @@
               <option name="myItemId" value="Themed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Elements" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Contacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -500,7 +352,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Posts" />
+              <option name="myItemId" value="Options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -552,7 +430,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CarTypeCars" />
+              <option name="myItemId" value="Dashboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,6 +459,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,11 +513,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\thuexedn\View\Themed\Admin\Options" />
+      <recent name="D:\xampp\htdocs\thuexedn\Controller" />
       <recent name="D:\Ikyu SVN\07_source\thuexe\View\Themed\Site\webroot\img" />
       <recent name="D:\Ikyu SVN\07_source\thuexe\Controller" />
       <recent name="D:\Ikyu SVN\07_source\thuexe\Model" />
-      <recent name="D:\Ikyu SVN\07_source\thuexe\View\Themed\Admin\Contacts" />
-      <recent name="D:\Ikyu SVN\07_source\thuexe\View\Helper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ikyu SVN\07_source\thuexe\View\Themed\Site" />
@@ -679,7 +571,11 @@
       <created>1413419304429</created>
       <updated>1413419304429</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="option">
+      <created>1413505313229</created>
+      <updated>1413505313229</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,8 +588,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19166666" sideWeight="0.819398" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18257576" sideWeight="0.819398" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.819398" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19090909" sideWeight="0.819398" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -719,125 +615,118 @@
     </option>
     <MESSAGE value="New Update" />
     <MESSAGE value="capcha" />
-    <option name="LAST_COMMIT_MESSAGE" value="capcha" />
+    <MESSAGE value="option" />
+    <option name="LAST_COMMIT_MESSAGE" value="option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Posts/car_rental.ctp">
+    <entry file="file://$PROJECT_DIR$/tmp/cache/cake_settings">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="27" selection-start="879" selection-end="879" vertical-scroll-proportion="-8.16" vertical-offset="340" max-vertical-offset="4672">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="451" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Posts/daily_tour.ctp">
+    <entry file="file://$PROJECT_DIR$/Config/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="48" selection-start="689" selection-end="689" vertical-scroll-proportion="-3.68" vertical-offset="264" max-vertical-offset="5760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Posts/weekly_tour.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="1" selection-start="904" selection-end="904" vertical-scroll-proportion="0.44859812" vertical-offset="336" max-vertical-offset="5760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="56" selection-start="978" selection-end="978" vertical-scroll-proportion="0.57009345" vertical-offset="156" max-vertical-offset="1088">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5808" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lib/Cake/Model/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3675" column="20" selection-start="110800" selection-end="110800" vertical-scroll-proportion="-6.04" vertical-offset="58377" max-vertical-offset="60464">
+        <state line="3688" column="58" selection-start="111178" selection-end="111206" vertical-scroll-proportion="0.0" vertical-offset="59008" max-vertical-offset="60736">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/CarTypeCar.php">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="25" selection-start="709" selection-end="709" vertical-scroll-proportion="-4.96" vertical-offset="500" max-vertical-offset="928">
+        <state line="12" column="77" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="640">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_edit.ctp">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="44" selection-start="1539" selection-end="1550" vertical-scroll-proportion="-14.68" vertical-offset="401" max-vertical-offset="1200">
+        <state line="4" column="55" selection-start="93" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="671" max-vertical-offset="1488">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Contacts/contact.ctp">
+    <entry file="file://$PROJECT_DIR$/Model/Option.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1854" selection-end="2195" vertical-scroll-proportion="0.23809524" vertical-offset="748" max-vertical-offset="1168">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/OptionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="53" selection-start="1652" selection-end="1652" vertical-scroll-proportion="2.702381" vertical-offset="17" max-vertical-offset="1760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/CarTypeCarsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="72" selection-start="1036" selection-end="1346" vertical-scroll-proportion="-13.48" vertical-offset="287" max-vertical-offset="2096">
+        <state line="64" column="30" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1520">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="32" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-11.04" vertical-offset="492" max-vertical-offset="5808">
+        <state line="50" column="51" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="5824">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/CarTypeCars/admin_index.ctp">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="108" selection-start="1541" selection-end="1609" vertical-scroll-proportion="-8.04" vertical-offset="391" max-vertical-offset="1472">
-          <folding>
-            <marker date="1413482220895" expanded="true" signature="912:914" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="310" column="31" selection-start="5755" selection-end="5755" vertical-scroll-proportion="0.0" vertical-offset="4625" max-vertical-offset="5280">
+        <state line="64" column="28" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-38.08" vertical-offset="72" max-vertical-offset="1376">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/index.ctp">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="167" selection-start="4207" selection-end="4285" vertical-scroll-proportion="-18.24" vertical-offset="1768" max-vertical-offset="3312">
+        <state line="22" column="48" selection-start="754" selection-end="754" vertical-scroll-proportion="-3.84" vertical-offset="256" max-vertical-offset="1168">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/car_rental.ctp">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Dashboard/admin_index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="281" selection-end="281" vertical-scroll-proportion="-2.4" vertical-offset="52" max-vertical-offset="1184">
+        <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="192">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp">
+    <entry file="file://$PROJECT_DIR$/Controller/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="970" selection-end="970" vertical-scroll-proportion="0.46411484" vertical-offset="206" max-vertical-offset="960">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="7" column="3" selection-start="151" selection-end="151" vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_edit.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="97" selection-start="1720" selection-end="1720" vertical-scroll-proportion="-11.68" vertical-offset="124" max-vertical-offset="784">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/edit.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/OptionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="33" selection-start="1260" selection-end="1265" vertical-scroll-proportion="-5.4" vertical-offset="761" max-vertical-offset="1920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="58" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.7105263" vertical-offset="263" max-vertical-offset="1008">
+          <folding />
         </state>
       </provider>
     </entry>

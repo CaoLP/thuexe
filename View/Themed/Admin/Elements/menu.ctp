@@ -46,10 +46,28 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index'))?>">
+                        <a href="<?php echo $this->Html->url(array('controller'=>'tour_bookings','action'=>'index'))?>">
+                            <i class="icon-shopping-cart"></i>
+                            <span>Quản lý đặt Tour</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo $this->Html->url(array('controller'=>'contacts','action'=>'index'))?>">
+                            <i class="icon-mail-reply-all"></i>
+                            <span>Liên hệ</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="icon-gear"></i>
                             <span>Tùy chỉnh</span>
+                            <b class="caret"></b>
                         </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index'))?>">Tùy chỉnh</a></li>
+                            <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index','ads'))?>">Quảng cáo</a></li>
+                            <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index','slide'))?>">Slides</a></li>
+                        </ul>
                     </li>
 
                 </ul>

@@ -52,8 +52,10 @@ class AppController extends Controller
             '8 đêm', '9 đêm', '10 đêm', '11 đêm', '12 đêm', '13 đêm', '14 đêm', '15 đêm',
             '16 đêm', '17 đêm', '18 đêm', '19 đêm', '20 ngày');
         $this->set(compact('days_viet', 'days_en', 'days_vi', 'nights_vi'));
-
         $this->setTitleForLayout();
+
+        $this->loadModel('Option');
+        $this->Option->writeConfigure();
     }
     public function setTitleForLayout(){
         if (isset($this->title_for_layout)) {
