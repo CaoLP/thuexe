@@ -64,6 +64,16 @@ $('#thumbail').html('<img class="img-thumbnail img-responsive" src="'+imgData+'"
 <?php
 $this->Html->scriptEnd();
 ?>
+<?php
+$this->Html->scriptStart(array('inline' => false));
+?>
+   $('#OptionAdminAddForm').on('submit',function(e){
+    alert('a000');
+
+    })
+<?php
+$this->Html->scriptEnd();
+?>
 <div class="col-md-9">
     <div class="widget stacked ">
 
