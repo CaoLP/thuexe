@@ -56,8 +56,7 @@ class Option extends AppModel
     );
 
     public function afterSave($created, $options = array()){
-        if($created)
-            Cache::delete('Settings');
+        Cache::delete('Settings');
         parent::afterSave($created, $options = array());
     }
     public function afterDelete(){

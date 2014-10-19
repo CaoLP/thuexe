@@ -67,13 +67,13 @@ $this->Html->scriptEnd();
 <?php
 $this->Html->scriptStart(array('inline' => false));
 ?>
-   $('#OptionAdminAddForm').on('submit',function(e){
-    alert('a000');
+ //  $('#OptionAdminAddForm').on('submit',function(e){
 
-    })
+//    })
 <?php
 $this->Html->scriptEnd();
 ?>
+
 <div class="col-md-9">
     <div class="widget stacked ">
 
@@ -100,14 +100,19 @@ $this->Html->scriptEnd();
                             echo $this->Form->input('id');
                             echo $this->Form->hidden('name');
                             echo $this->Form->hidden('value');
-                            echo $this->Form->hidden('group',array('value',$group));
+                            echo $this->Form->hidden('group',array('value'=>$group));
                             echo $this->Form->hidden('key');
                             ?>
-							<div id="thumbail"></div>
+							<div id="thumbail">
+								<?php if(isset($this->request->data['Post']['picInput'])):?>
+								<img class="img-thumbnail img-responsive" src="<?php echo $this->request->data['Post']['picInput'];?>">
+								<?php endif;?>
+							</div>
 							<a href="javascript:;" class="choice-img">Chọn ảnh</a>
 							<?php
-							echo $this->Form->hidden('P.picInput', array('id' => 'picInput'));
-							echo $this->Form->input('Post.body');
+							echo $this->Form->hidden('Post.picInput', array('id' => 'picInput'));
+							echo $this->Form->input('Post.title');
+							echo $this->Form->input('Post.link');
 							?>
                         </div>
                     </div>

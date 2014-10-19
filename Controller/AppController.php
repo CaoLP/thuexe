@@ -52,16 +52,23 @@ class AppController extends Controller
             '8 đêm', '9 đêm', '10 đêm', '11 đêm', '12 đêm', '13 đêm', '14 đêm', '15 đêm',
             '16 đêm', '17 đêm', '18 đêm', '19 đêm', '20 ngày');
         $this->set(compact('days_viet', 'days_en', 'days_vi', 'nights_vi'));
-        $this->setTitleForLayout();
+
 
         $this->loadModel('Option');
         $this->Option->writeConfigure();
+
+		$this->loadModel('Post');
+		$tomorrow = $this->Post->findTomorrow();
+		$this->set(compact('tomorrow'));
     }
     public function setTitleForLayout(){
         if (isset($this->title_for_layout)) {
             $this->set('title_for_layout', $this->title_for_layout);
         }
     }
+	public function beforeRender(){
+		$this->setTitleForLayout();
+	}
     public function isAuthorized($user)
     {
         // Here is where we should verify the role and give access based on role

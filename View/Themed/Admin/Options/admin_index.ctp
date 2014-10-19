@@ -37,9 +37,9 @@
                                 <td><?php echo h($option['Option']['group']); ?>&nbsp;</td>
                                 <td><?php echo h($option['Option']['key']); ?>&nbsp;</td>
                                 <td class="actions">
-                                    <?php echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $option['Option']['id']), array('escape' => false, 'title' => __('View'))); ?>
-                                    <?php echo $this->Html->link('<i class="icon-edit"></i>', array('action' => 'edit', $option['Option']['id']), array('escape' => false, 'title' => __('Edit'))); ?>
-                                    <?php echo $this->Form->postLink('<i class="icon-trash"></i>', array('action' => 'delete', $option['Option']['id']), array('escape' => false, 'title' => __('Delete')), __('Are you sure you want to delete # %s?', $option['Option']['id'])); ?>
+                                    <?php echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $option['Option']['id'], $group), array('escape' => false, 'title' => __('View'))); ?>
+                                    <?php echo $this->Html->link('<i class="icon-edit"></i>', array('action' => 'edit', $option['Option']['id'], $group), array('escape' => false, 'title' => __('Edit'))); ?>
+                                    <?php echo $this->Form->postLink('<i class="icon-trash"></i>', array('action' => 'delete', $option['Option']['id'], $group), array('escape' => false, 'title' => __('Delete')), __('Are you sure you want to delete # %s?', $option['Option']['id'])); ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

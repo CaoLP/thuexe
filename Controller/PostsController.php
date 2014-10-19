@@ -8,7 +8,6 @@ App::uses('AppController', 'Controller');
  */
 class PostsController extends AppController
 {
-
     /**
      * Components
      *
@@ -46,6 +45,7 @@ class PostsController extends AppController
             $carTypeCars = Set::combine($carTypeCars,array('{0}_{1}','{n}.CarTypeCar.post_id','{n}.CarTypeCar.car_type_id'),'{n}');
             $this->set(compact('carTypeCars','rental_options','car_types','opts'));
             $this->view = 'rental_option';
+			$this->title_for_layout = 'Bảng giá dịch vụ xe';
         }else{
             if ($type != null) {
                 $this->Paginator->settings = array(
@@ -54,6 +54,20 @@ class PostsController extends AppController
                         'Post.status' => 1
                     )
                 );
+				switch($type){
+					case 'car_rental':
+						$this->title_for_layout = 'Thông tin xe';
+						break;
+					case 'daily_tour':
+						$this->title_for_layout = 'Tour hằng ngày';
+						break;
+					case 'weekly_tour':
+						$this->title_for_layout = 'Tour hằng tuần';
+						break;
+					default:
+						$this->title_for_layout = 'Thông tin';
+						break;
+				}
             }
             $this->set('posts', $this->Paginator->paginate());
         }
@@ -67,6 +81,7 @@ class PostsController extends AppController
 	public function home()
 	{
 		$this->layout = 'home';
+		$this->title_for_layout = 'Trang chủ';
 		$cars = $this->Post->getTopCar();
 		$top_daily =  $this->Post->getTopDaily();
 		$top_weekly =  $this->Post->getTopWeekly();
@@ -88,6 +103,7 @@ class PostsController extends AppController
 				'Post.status' => 1
 			)
 		);
+		$this->title_for_layout = 'Thông tin xe';
 		$this->loadModel('CarType');
 		$carTypes= $this->CarType->find('list');
 		$this->set(compact('type','carTypes'));
@@ -110,6 +126,7 @@ class PostsController extends AppController
 			$carTypes= $this->CarType->find('list');
 			$this->set(compact('carTypes'));
 		}
+		$this->title_for_layout = $post['Post']['title'];
 //        if (!$this->Post->exists($id)) {
 //            throw new NotFoundException(__('Invalid post'));
 //        }

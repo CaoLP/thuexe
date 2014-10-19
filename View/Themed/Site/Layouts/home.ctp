@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>metro-bootstrap: Twitter Bootstrap with Metro style</title>
+	<title><?php echo Configure::read('W.Site.name');?> | <?php echo $title_for_layout?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
     echo $this->Html->meta('icon');
     echo $this->fetch('meta');
-
+	echo $this->element('meta');
     echo $this->Html->css(
         array(
             'metro-bootstrap.min',
@@ -29,36 +29,41 @@
 		?>
     </div>
 </div>
+<?php
+$slides = Configure::read('W.slide');
+?>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators top-carousel">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		<?php
+		$count = 0;
+		foreach($slides as $slide){
+			?>
+			<li data-target="#carousel-example-generic" data-slide-to="<?php echo $count;?>" class="<?php if($count==0) echo 'active';?>"></li>
+		<?php
+			$count++;
+		}
+		?>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-        <div class="item active">
-            <img src="http://cdn.dulichhe.com/data/gallery/fullsize/resize_1_1400x490_1413191266_3025.jpg" alt="...">
+		<?php
+		$count = 0;
+		foreach($slides as $slide){
+			$d = json_decode($slide,true);
+		?>
+        <div class="item <?php if($count==0) echo 'active';?>">
+            <img src="<?php echo $this->Image->resizedUrl($d['picInput'],1400,490,100,WWW_ROOT);?>" alt="<?php echo $d['title']; ?>">
             <div class="carousel-caption">
-                ...
+                <a href="<?php echo $d['link']; ?>"><?php echo $d['title']; ?></a>
             </div>
         </div>
-        <div class="item">
-            <img src="http://cdn.dulichhe.com/data/gallery/fullsize/resize_1_1400x490_1413191266_3025.jpg" alt="...">
-            <div class="carousel-caption">
-                ...
-            </div>
-        </div>
-        <div class="item">
-            <img src="http://cdn.dulichhe.com/data/gallery/fullsize/resize_1_1400x490_1413191266_3025.jpg" alt="...">
-            <div class="carousel-caption">
-                ...
-            </div>
-        </div>
+		<?php
+			$count++;
+		}
+		?>
     </div>
-
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>

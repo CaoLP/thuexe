@@ -15,8 +15,8 @@ class ContactsController extends AppController {
  */
 	var $helpers = array('Html', 'Form', 'Captcha');
 	public $components = array('Paginator','Captcha'=>array('field'=>'security_code'));
-
 	public function beforeFilter() {
+		 $this->title_for_layout = 'Liên hệ';
 		parent::beforeFilter();
 		$this->Auth->allow('contact','captcha');
 	}/**

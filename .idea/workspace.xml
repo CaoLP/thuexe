@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="655f1793-34bd-4fa0-963e-f32991fe961d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller/DashboardController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Themed/Admin/Dashboard/admin_index.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Themed/Site/Elements/meta.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/AppController.php" afterPath="$PROJECT_DIR$/Controller/AppController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/ContactsController.php" afterPath="$PROJECT_DIR$/Controller/ContactsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Option.php" afterPath="$PROJECT_DIR$/Model/Option.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/OptionsController.php" afterPath="$PROJECT_DIR$/Controller/OptionsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Post.php" afterPath="$PROJECT_DIR$/Model/Post.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/PostsController.php" afterPath="$PROJECT_DIR$/Controller/PostsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/TourBookingsController.php" afterPath="$PROJECT_DIR$/Controller/TourBookingsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Options/admin_edit.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Options/admin_edit.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Posts/car_rental_view.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Posts/car_rental_view.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Elements/contact_info.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Elements/contact_info.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Layouts/default.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Layouts/default.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Layouts/home.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Layouts/home.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_1.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_1.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_2.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_2.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp" afterPath="$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config/routes.php" afterPath="$PROJECT_DIR$/Config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css" afterPath="$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Themed/Site/Posts/view.ctp" afterPath="$PROJECT_DIR$/View/Themed/Site/Posts/view.ctp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thuexedn.iws" />
@@ -39,73 +45,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OptionsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/OptionsController.php">
+      <file leaf-file-name="home_ads_1.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_1.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="33" selection-start="1260" selection-end="1265" vertical-scroll-proportion="-5.4" vertical-offset="761" max-vertical-offset="1920">
+            <state line="14" column="13" selection-start="579" selection-end="579" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp">
+      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="48" selection-start="754" selection-end="754" vertical-scroll-proportion="-3.84" vertical-offset="256" max-vertical-offset="1168">
+            <state line="287" column="34" selection-start="8348" selection-end="8348" vertical-scroll-proportion="0.5365854" vertical-offset="4505" max-vertical-offset="5270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/DashboardController.php">
+      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/view.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="151" selection-end="151" vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="528">
+            <state line="131" column="36" selection-start="4128" selection-end="4128" vertical-scroll-proportion="0.65384614" vertical-offset="2244" max-vertical-offset="3842">
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_edit.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_edit.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="105" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-9.807693" vertical-offset="408" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/routes.php">
+      <file leaf-file-name="car_rental_view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/car_rental_view.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="97" selection-start="1720" selection-end="1720" vertical-scroll-proportion="-11.68" vertical-offset="124" max-vertical-offset="784">
+            <state line="109" column="21" selection-start="3413" selection-end="3413" vertical-scroll-proportion="-17.653847" vertical-offset="1394" max-vertical-offset="2091">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ads_slides.ctp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp">
+      <file leaf-file-name="contact_info.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/contact_info.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="58" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.7105263" vertical-offset="263" max-vertical-offset="1008">
-              <folding />
+            <state line="9" column="6" selection-start="191" selection-end="191" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
+              <folding>
+                <marker date="1413709285201" expanded="true" signature="16:70" placeholder="..." />
+                <marker date="1413709285201" expanded="true" signature="48:63" placeholder="..." />
+                <marker date="1413709285201" expanded="true" signature="88:190" placeholder="..." />
+                <marker date="1413709285201" expanded="true" signature="120:183" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Dashboard/admin_index.ctp">
+      <file leaf-file-name="home_ads_2.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_2.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="192">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Option.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Option.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="30" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1520">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="28" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-38.08" vertical-offset="72" max-vertical-offset="1376">
+            <state line="17" column="10" selection-start="173" selection-end="467" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -114,7 +120,25 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="51" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="5824">
+            <state line="10" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="-2.6153846" vertical-offset="102" max-vertical-offset="6477">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/AppController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="114" selection-start="1551" selection-end="1657" vertical-scroll-proportion="-1.3076923" vertical-offset="561" max-vertical-offset="1275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TourBookingsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/TourBookingsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="6" selection-start="573" selection-end="573" vertical-scroll-proportion="-10.461538" vertical-offset="102" max-vertical-offset="4675">
               <folding />
             </state>
           </provider>
@@ -144,22 +168,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/View/Themed/Site/webroot/css/style.css" />
-        <option value="$PROJECT_DIR$/Controller/PostsController.php" />
-        <option value="$PROJECT_DIR$/View/Themed/Site/Posts/rental_option.ctp" />
-        <option value="$PROJECT_DIR$/Lib/Cake/Core/Configure.php" />
-        <option value="$PROJECT_DIR$/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/Config/core.php" />
-        <option value="$PROJECT_DIR$/Model/Option.php" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp" />
-        <option value="$PROJECT_DIR$/Controller/Dashboard.php" />
-        <option value="$PROJECT_DIR$/Controller/DashboardController.php" />
-        <option value="$PROJECT_DIR$/Config/routes.php" />
         <option value="$PROJECT_DIR$/Controller/OptionsController.php" />
-        <option value="$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Layouts/default.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Layouts/home.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Elements/meta.ctp" />
+        <option value="$PROJECT_DIR$/Controller/ContactsController.php" />
+        <option value="$PROJECT_DIR$/Controller/PostsController.php" />
+        <option value="$PROJECT_DIR$/Controller/TourBookingsController.php" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Posts/view.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Elements/contact_info.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Posts/car_rental_view.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_1.ctp" />
+        <option value="$PROJECT_DIR$/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Posts/car_rental.ctp" />
+        <option value="$PROJECT_DIR$/View/Themed/Admin/Options/admin_edit.ctp" />
+        <option value="$PROJECT_DIR$/Model/Post.php" />
       </list>
     </option>
   </component>
@@ -170,8 +194,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -257,7 +281,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -272,7 +295,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,7 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -296,7 +319,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -307,6 +330,14 @@
               <option name="myItemId" value="Themed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -314,7 +345,137 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -336,7 +497,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Themed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="thuexedn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -362,7 +549,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -388,7 +575,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -414,33 +601,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Themed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -454,7 +615,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -468,16 +629,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thuexedn" />
+              <option name="myItemId" value="thuexe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Config" />
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -485,7 +651,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
@@ -496,18 +662,51 @@
   </component>
   <component name="PublishConfig">
     <servers>
-      <server id="201eeadb-15f1-462d-b406-a4e575f0ba9a">
+      <server id="02961857-7afd-457f-b7c5-b2f83556f1b0">
         <serverdata />
       </server>
-      <server id="4ca95edc-6b59-47da-9fc2-e38703cdf763">
+      <server id="20041457-86a0-46ad-8c97-c6e0157fa89f">
         <serverdata />
       </server>
-      <server id="f6ca0a5f-9eec-481f-9c13-aee8b6f90d58">
+      <server id="20aac3f5-7ee1-4bcc-b8a9-fb20ccc73307">
+        <serverdata />
+      </server>
+      <server id="36d8dc29-3542-4ca8-bf0b-3b106e003bf0">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
+      </server>
+      <server id="371e1f2c-5fc1-493a-ab58-dcaa2616d186">
+        <serverdata />
+      </server>
+      <server id="48f24f13-4a51-44ca-a65a-5b011fcf365b">
+        <serverdata />
+      </server>
+      <server id="633d18ed-8662-4363-a953-61d0093b49dd">
+        <serverdata />
+      </server>
+      <server id="7166c9d1-2cee-421f-9af9-253632a33e0d">
+        <serverdata />
+      </server>
+      <server id="7d45410d-59dd-4941-af72-5e4cb53e423b">
+        <serverdata />
+      </server>
+      <server id="86c7ab6e-a557-4a1f-99f3-60035f7b9dc7">
+        <serverdata />
+      </server>
+      <server id="af1e3887-b408-49e0-b1c7-4854791876f3">
+        <serverdata />
+      </server>
+      <server id="e4fe11c6-f892-448f-b599-5fea31605645">
+        <serverdata />
+      </server>
+      <server id="f0ed844c-8550-40b0-8672-bea6851b02b1">
+        <serverdata />
+      </server>
+      <server id="fa75b947-2d50-40d6-acb7-a00583bb1a86">
+        <serverdata />
       </server>
     </servers>
   </component>
@@ -522,6 +721,118 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ikyu SVN\07_source\thuexe\View\Themed\Site" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -575,30 +886,34 @@
       <created>1413505313229</created>
       <updated>1413505313229</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="option">
+      <created>1413628856829</created>
+      <updated>1413628856829</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18060201" sideWeight="0.62966913" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1799787" sideWeight="0.12166489" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.7764141" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.819398" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19090909" sideWeight="0.819398" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1995731" sideWeight="0.819398" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.819398" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1799787" sideWeight="0.48292422" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.60245466" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.36446103" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290735" sideWeight="0.63180363" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -622,110 +937,123 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tmp/cache/cake_settings">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Layouts/home.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="451" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5808" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Cake/Model/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3688" column="58" selection-start="111178" selection-end="111206" vertical-scroll-proportion="0.0" vertical-offset="59008" max-vertical-offset="60736">
+        <state line="9" column="32" selection-start="342" selection-end="342" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1632">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/nav_top.ctp">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/meta.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="77" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="640">
+        <state line="7" column="74" selection-start="532" selection-end="532" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Layouts/default.ctp">
+    <entry file="file://$PROJECT_DIR$/Controller/ContactsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="55" selection-start="93" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="671" max-vertical-offset="1488">
+        <state line="25" column="3" selection-start="572" selection-end="572" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1819">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Option.php">
+    <entry file="file://$PROJECT_DIR$/Lib/Cake/Controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="30" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1520">
+        <state line="1099" column="20" selection-start="33047" selection-end="33047" vertical-scroll-proportion="0.3457676" vertical-offset="18221" max-vertical-offset="21029">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="51" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="5824">
+        <state line="10" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="-2.6153846" vertical-offset="102" max-vertical-offset="6477">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Elements/menu.ctp">
+    <entry file="file://$PROJECT_DIR$/Controller/TourBookingsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="28" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-38.08" vertical-offset="72" max-vertical-offset="1376">
+        <state line="22" column="6" selection-start="573" selection-end="573" vertical-scroll-proportion="-10.461538" vertical-offset="102" max-vertical-offset="4675">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_2.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="10" selection-start="173" selection-end="467" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/car_rental_view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="21" selection-start="3413" selection-end="3413" vertical-scroll-proportion="-17.653847" vertical-offset="1394" max-vertical-offset="2091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Posts/view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="36" selection-start="4128" selection-end="4128" vertical-scroll-proportion="0.65384614" vertical-offset="2244" max-vertical-offset="3842">
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Posts/car_rental.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="440" selection-end="600" vertical-scroll-proportion="0.5121951" vertical-offset="0" max-vertical-offset="4964">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/contact_info.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="191" selection-end="191" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
+          <folding>
+            <marker date="1413709285201" expanded="true" signature="16:70" placeholder="..." />
+            <marker date="1413709285201" expanded="true" signature="48:63" placeholder="..." />
+            <marker date="1413709285201" expanded="true" signature="88:190" placeholder="..." />
+            <marker date="1413709285201" expanded="true" signature="120:183" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="48" selection-start="754" selection-end="754" vertical-scroll-proportion="-3.84" vertical-offset="256" max-vertical-offset="1168">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Dashboard/admin_index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="192">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="151" selection-end="151" vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="528">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/admin_edit.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1216">
+        <state line="39" column="105" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-9.807693" vertical-offset="408" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/routes.php">
+    <entry file="file://$PROJECT_DIR$/View/Themed/Site/Elements/home_ads_1.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="97" selection-start="1720" selection-end="1720" vertical-scroll-proportion="-11.68" vertical-offset="124" max-vertical-offset="784">
+        <state line="14" column="13" selection-start="579" selection-end="579" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/edit.ctp">
+    <entry file="file://$PROJECT_DIR$/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="430">
+        <state line="44" column="114" selection-start="1551" selection-end="1657" vertical-scroll-proportion="-1.3076923" vertical-offset="561" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/OptionsController.php">
+    <entry file="file://$PROJECT_DIR$/Model/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="33" selection-start="1260" selection-end="1265" vertical-scroll-proportion="-5.4" vertical-offset="761" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Themed/Admin/Options/ads_slides.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="58" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.7105263" vertical-offset="263" max-vertical-offset="1008">
+        <state line="287" column="34" selection-start="8348" selection-end="8348" vertical-scroll-proportion="0.5365854" vertical-offset="4505" max-vertical-offset="5270">
           <folding />
         </state>
       </provider>

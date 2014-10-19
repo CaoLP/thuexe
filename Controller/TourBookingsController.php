@@ -17,7 +17,7 @@ class TourBookingsController extends AppController
     //http://www.devarticles.in/cakephp/simple-captcha-component-for-cakephp/
     var $helpers = array('Html', 'Form', 'Captcha');
     public $components = array('Paginator','Captcha'=>array('field'=>'security_code'));
-
+	public $title_for_layout = 'Đặt Tour';
     /**
      * index method
      *

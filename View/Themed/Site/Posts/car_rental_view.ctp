@@ -104,7 +104,7 @@ if (count ($temp_img) > 0) $images = $temp_img;
 					</table>
 				</li>
 				<li><br></li>
-				<li><strong>Tư vấn:</strong></li>
+				<li><strong>Tư vấn:</strong><span class="f-right date-text"><?php echo Configure::read('W.Site.help_phone');?></span></li>
 				<li><br></li>
 				<li><img src="http://cdn.dulichhe.com/images/2014/ban-muon-sgt-goi-lai.gif" width="239" height="50">
 				</li>

@@ -53,14 +53,20 @@ class OptionsController extends AppController {
  * @return void
  */
 	public function admin_add($group=null) {
-        if(in_array($group,array('ads','slide'))) $this->view = 'ads_slides';
+        if(in_array($group,array('ads','slide','promote'))) $this->view = 'ads_slides';
         $this->set(compact('group'));
 		if ($this->request->is('post')) {
+			if(in_array($group,array('ads','slide','promote'))){
+				$this->request->data['Option']['name'] = strtotime(date('Y-m-d h:m:s'));
+				$this->request->data['Option']['key'] = $group . $this->request->data['Option']['name'];
+				if(empty($this->request->data['Post']['link'])) $this->request->data['Post']['link'] = 'javascript:;';
+				$this->request->data['Option']['value'] = json_encode($this->request->data['Post']);
+			}
 			$this->Option->create();
 			if ($this->Option->save($this->request->data)) {
 				$this->Session->setFlash(__('The option has been saved.'));
                 $this->Option->writeConfigure();
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('action' => 'index',$group));
 			} else {
 				$this->Session->setFlash(__('The option could not be saved. Please, try again.'));
 			}
@@ -78,16 +84,27 @@ class OptionsController extends AppController {
 		if (!$this->Option->exists($id)) {
 			throw new NotFoundException(__('Invalid option'));
 		}
+		if(in_array($group,array('ads','slide','promote'))) $this->view = 'ads_slides';
+		$this->set(compact('group'));
 		if ($this->request->is(array('post', 'put'))) {
+			if(in_array($group,array('ads','slide','promote'))){
+				$this->request->data['Option']['name'] = strtotime(date('Y-m-d h:m:s'));
+				$this->request->data['Option']['key'] = $group . $this->request->data['Option']['name'];
+				if(empty($this->request->data['Post']['link'])) $this->request->data['Post']['link'] = 'javascript:;';
+				$this->request->data['Option']['value'] = json_encode($this->request->data['Post']);
+			}
 			if ($this->Option->save($this->request->data)) {
 				$this->Session->setFlash(__('The option has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('action' => 'index',$group));
 			} else {
 				$this->Session->setFlash(__('The option could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Option.' . $this->Option->primaryKey => $id));
 			$this->request->data = $this->Option->find('first', $options);
+			if(in_array($group,array('ads','slide','promote'))){
+				$this->request->data['Post'] = json_decode($this->request->data['Option']['value'],true);
+			}
 		}
 	}
 
@@ -98,7 +115,7 @@ class OptionsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function admin_delete($id = null) {
+	public function admin_delete($id = null,$group=null) {
 		$this->Option->id = $id;
 		if (!$this->Option->exists()) {
 			throw new NotFoundException(__('Invalid option'));
@@ -109,6 +126,6 @@ class OptionsController extends AppController {
 		} else {
 			$this->Session->setFlash(__('The option could not be deleted. Please, try again.'));
 		}
-		return $this->redirect(array('action' => 'index'));
+		return $this->redirect(array('action' => 'index',$group));
 	}
 }

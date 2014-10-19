@@ -290,4 +290,15 @@ class Post extends AppModel
         );
         return $this->find('first',$condition);
     }
+	public function findTomorrow(){
+		$days_en = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday','Everyday');
+		$result = $this->find('all',array(
+										 'conditions'=>array(
+											 'Post.type' => 'weekly_tour',
+//											 'Postmetum.meta_key' => 'start_date',
+//											 'Postmetum.meta_value LIKE' => '\"2\"',
+										 )
+									));
+		debug($result);die;
+	}
 }

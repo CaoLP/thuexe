@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>metro-bootstrap: Twitter Bootstrap with Metro style</title>
+	<title><?php echo Configure::read('W.Site.name');?> | <?php echo $title_for_layout?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php
 	echo $this->Html->meta ('icon');
 	echo $this->fetch ('meta');
-
+	echo $this->element('meta');
 	echo $this->Html->css (
 		array (
 			  'metro-bootstrap.min',
