@@ -10,7 +10,7 @@
 			$d = json_decode ($ad, true);
 			?>
 			<a href="<?php echo $d['link']; ?>">
-				<img class="img-responsive" src="<?php echo $d['picInput']; ?>" alt="<?php echo $d['title']; ?>">
+				<img class="img-responsive" src="<?php echo  $d['picInput']; ?>" alt="<?php echo $d['title']; ?>">
 			</a>
 			<hr>
 		<?php

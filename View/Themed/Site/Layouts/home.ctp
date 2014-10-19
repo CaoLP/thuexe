@@ -54,7 +54,7 @@ $slides = Configure::read('W.slide');
 			$d = json_decode($slide,true);
 		?>
         <div class="item <?php if($count==0) echo 'active';?>">
-            <img src="<?php echo $this->Image->resizedUrl($d['picInput'],1400,490,100,WWW_ROOT);?>" alt="<?php echo $d['title']; ?>">
+            <img src="<?php echo '/'. $this->Image->resizedUrl($d['picInput'],1400,490,100,WWW_ROOT);?>" alt="<?php echo $d['title']; ?>">
             <div class="carousel-caption">
                 <a href="<?php echo $d['link']; ?>"><?php echo $d['title']; ?></a>
             </div>

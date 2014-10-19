@@ -292,13 +292,37 @@ class Post extends AppModel
     }
 	public function findTomorrow(){
 		$days_en = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday','Everyday');
+		$day =   date('N', strtotime ('1 days')) -1 ;
 		$result = $this->find('all',array(
 										 'conditions'=>array(
 											 'Post.type' => 'weekly_tour',
-//											 'Postmetum.meta_key' => 'start_date',
-//											 'Postmetum.meta_value LIKE' => '\"2\"',
-										 )
+											 'Postmetum.meta_key' => 'start_date',
+											 'Postmetum.meta_value LIKE' => '%"'.$day.'"%',
+										 ),
+										 'limit'=>5,
+										'joins'=>array(
+											array(
+												'table'=>'postmeta',
+												'alias'=>'Postmetum',
+												'type' => 'INNER',
+												'conditions' => array(
+													'Postmetum.post_id = Post.id'
+												)
+											)
+										)
 									));
-		debug($result);die;
+		$result = Set::combine($result,'{n}.Post.id','{n}');
+		if(count($result) < 5){
+			$next = 5 - count($result) ;
+			$result2 = $this->find('all',array(
+											 'conditions'=>array(
+												 'Post.type' => 'daily_tour',
+											 ),
+											 'limit'=> $next
+										));
+			$result2 = Set::combine($result2,'{n}.Post.id','{n}');
+			$result = array_merge($result,$result2);
+		}
+		return $result;
 	}
 }

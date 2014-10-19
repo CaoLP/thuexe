@@ -3,15 +3,22 @@
 	<div class="panel-heading header-style">Tour ngày mai</div>
 	<div class="panel-body">
 		<ul class="media-list">
+			<?php
+			foreach ($tomorrow as $key => $post) {
+			$post_metas = Set::combine ($post['Postmetum'], '{n}.meta_key', '{n}');
+			$thumb = $post_metas['thumbnail']['meta_value'];
+			?>
 			<li class="media">
 				<a class="pull-left" href="#">
-					<img class="media-object" src="..." alt="...">
+					<img class="media-object" src="<?php echo '/'.$this->Image->resizedUrl($post_metas['thumbnail']['meta_value'],80,48,100,WWW_ROOT);?>" alt="<?php echo $post['Post']['title'];?>">
 				</a>
 				<div class="media-body">
-					<span class="media-heading">Media heading Media headingMedia headingMedia headingMedia headingMedia headingMedia headingMedia headingMedia heading Media headingMedia headingMedia heading</span>
-					...
+					<span class="feature-title m-0"><?php echo $post['Post']['title'];?></span>
 				</div>
 			</li>
+			<?php
+			}
+			?>
 		</ul>
 	</div>
 
@@ -29,7 +36,7 @@
 			$d = json_decode ($promote, true);
 			?>
 			<a href="<?php echo $d['link']; ?>">
-				<img class="img-responsive" src="<?php echo $d['picInput']; ?>" alt="<?php echo $d['title']; ?>">
+				<img class="img-responsive" src="<?php echo '/'. $d['picInput']; ?>" alt="<?php echo $d['title']; ?>">
 			</a>
 			<hr>
 		<?php
