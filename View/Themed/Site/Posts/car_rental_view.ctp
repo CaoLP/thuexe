@@ -106,7 +106,7 @@ if (count ($temp_img) > 0) $images = $temp_img;
 				<li><br></li>
 				<li><strong>Tư vấn:</strong><span class="f-right date-text"><?php echo Configure::read('W.Site.help_phone');?></span></li>
 				<li><br></li>
-				<li><img src="http://cdn.dulichhe.com/images/2014/ban-muon-sgt-goi-lai.gif" width="239" height="50">
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'contacts','action'=>'contact'))?>"><img src="/img/contact_sm.png" width="239" height="50"></a>
 				</li>
 			</ul>
 		</div>

@@ -48,10 +48,22 @@
 				<i class="glyphicon glyphicon-phone"></i>
 			</a>
 		</li>
-		<li>
+		<li class="custom-drop">
 			<a>
 				<i class="glyphicon glyphicon-search"></i>
 			</a>
+			<ul class="dropdown-menu container" role="menu" aria-labelledby="dLabel">
+				<form action="<?php echo $this->Html->url(array('controller'=>'posts','action'=>'search'))?>" method="post">
+				<li class="col-lg-12">
+					<div class="input-group">
+						<input type="text" name="data[q]" class="form-control">
+						  <span class="input-group-btn">
+							<button class="btn btn-default" type="submit">Tìm kiếm</button>
+						  </span>
+					</div><!-- /input-group -->
+				</li>
+				</form>
+			</ul>
 		</li>
 	</ul>
 

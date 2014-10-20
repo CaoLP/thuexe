@@ -69,6 +69,7 @@
 .connect{
     list-style-type: none;
     text-align: center;
+    padding: 0;
 }
 .connect li { display: inline; }
 .content-index h3{
@@ -363,3 +364,7 @@
 .carousel-inner>.item  a{
     color: #ffffff;
 }
+.navbar-collapse{
+    background-color: #0a69a6;
+}
+/*ea-test2@evolableasia.vn/*/

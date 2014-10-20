@@ -1,21 +1,17 @@
 <footer>
-	<div class="row" style="text-align: center">
-		<img src="http://cdn.dulichhe.com/images/2014/thequocte.gif" width="766" height="61">
+	<div class="row text-center">
+		Kết nối với <strong><?php echo Configure::read('W.Site.name');?></strong>
 	</div>
-	<div class="row" style="text-align: center">
-		<img src="http://cdn.dulichhe.com/images/2014/logo-danhhieu.gif" width="950" height="87">
-	</div>
-	<div class="row" style="text-align: center">
+	<div class="row  text-center">
 		<ul class="connect">
-			<li>Kết nối với Saigontourist</li>
-			<li><img src="http://cdn.dulichhe.com/images/2014/social-fa.gif" alt="Saigontourist" width="50"
-					 height="50"></li>
-			<li><img src="http://cdn.dulichhe.com/images/2014/social-google-plus3.gif"
-					 alt="Google+ Saigontourist" width="50" height="50"></li>
-			<li><img src="http://cdn.dulichhe.com/images/2014/social-twitter.gif" alt="Twitter Saigontourist"
-					 width="50" height="50"></li>
-			<li><img src="http://cdn.dulichhe.com/images/2014/social-youtube.gif" width="50" height="50"
-					 alt="Youtube"></li>
+			<li><a href="<?php echo Configure::read('W.Site.name');?>"><img src="/img/social-fa.gif" alt="Saigontourist" width="50"
+					 height="50"></a></li>
+			<li><a href="<?php echo Configure::read('W.Site.name');?>"><img src="/img/social-google-plus3.gif"
+					 alt="Google+ Saigontourist" width="50" height="50"></a></li>
+			<li><a href="<?php echo Configure::read('W.Site.name');?>"><img src="/img/social-twitter.gif" alt="Twitter Saigontourist"
+					 width="50" height="50"></a></li>
+			<li><a href="<?php echo Configure::read('W.Site.name');?>"><img src="/img/social-youtube.gif" width="50" height="50"
+					 alt="Youtube"></a></li>
 		</ul>
 	</div>
 </footer>

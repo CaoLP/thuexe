@@ -6,7 +6,7 @@ setlocale(LC_MONETARY, 'vi_VN')
         <div class="row">
             <div class="well-sm div-text-run">
                 <i class="glyphicon glyphicon-arrow-left f-left"></i>
-                <span class="top-text-run">Chiêm ngưỡng mùa thu trong nước. Khởi hành từ TP.HCM và Hà Nội.</span>
+                <span class="top-text-run"></span>
                 <i class="glyphicon glyphicon-arrow-right f-right"></i>
             </div>
         </div>

@@ -21,7 +21,7 @@ class PostsController extends AppController
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index','home','car_rental','view');
+        $this->Auth->allow('index','home','car_rental','view','search');
     }
     /**
      * index method
@@ -73,6 +73,24 @@ class PostsController extends AppController
         }
 
     }
+	public function search()
+	{
+		$q = '';
+		if(isset($this->request->data['q'])) $q = $this->request->data['q'];
+		$this->Post->recursive = 1;
+		$this->Paginator->settings = array(
+			'conditions' => array(
+				'Post.type' => array(
+					'daily_tour',
+					'weekly_tour',
+					'car_rental',
+				),
+				'Post.title like' => '%'.$q.'%',
+				'Post.status' => 1
+			)
+		);
+		$this->set('posts', $this->Paginator->paginate());
+	}
 	/**
 	 * index method
 	 *

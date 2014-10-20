@@ -39,11 +39,12 @@
 			<?php echo $this->fetch('content'); ?>
 
 		</div>
-		<?php
-			echo $this->element('footer');
-		?>
+
 	</div>
 </div>
+<?php
+echo $this->element('footer');
+?>
 <?php
 echo $this->element('contact_modal');
 ?>
@@ -52,7 +53,8 @@ echo $this->element('contact_modal');
 echo $this->Html->script (
 	array (
 		  '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-		  'bootstrap.min'
+		  'bootstrap.min',
+		  'custom'
 	)
 );
 echo $this->fetch ('script');
