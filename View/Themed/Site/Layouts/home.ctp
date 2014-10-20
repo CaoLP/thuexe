@@ -78,6 +78,9 @@ $slides = Configure::read('W.slide');
     <?php echo $this->element('footer')?>
     </div>
 </div>
+<?php
+echo $this->element('contact_modal');
+?>
 </body>
 <?php
 echo $this->Html->script(

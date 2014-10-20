@@ -9,11 +9,31 @@
 			$thumb = $post_metas['thumbnail']['meta_value'];
 			?>
 			<li class="media">
-				<a class="pull-left" href="#">
+				<a class="pull-left" href="<?php
+                    echo $this->Html->url(
+                        array(
+                            'controller'=>'posts',
+                            'action'=>'view',
+                            $post['Post']['type'],
+                            'url'=>$post['Post']['url'],
+                        )
+                    );
+                ?>">
 					<img class="media-object" src="<?php echo '/'.$this->Image->resizedUrl($post_metas['thumbnail']['meta_value'],80,48,100,WWW_ROOT);?>" alt="<?php echo $post['Post']['title'];?>">
 				</a>
 				<div class="media-body">
+                    <a class="pull-left" href="<?php
+                    echo $this->Html->url(
+                        array(
+                            'controller'=>'posts',
+                            'action'=>'view',
+                            $post['Post']['type'],
+                            'url'=>$post['Post']['url'],
+                        )
+                    );
+                    ?>">
 					<span class="feature-title m-0"><?php echo $post['Post']['title'];?></span>
+                    </a>
 				</div>
 			</li>
 			<?php

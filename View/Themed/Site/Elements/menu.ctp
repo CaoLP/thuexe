@@ -39,12 +39,12 @@
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
 		<li>
-			<a href="#">
+			<a href="#" data-toggle="modal" data-target="#myModal">
 				<i class="glyphicon glyphicon-envelope"></i>
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="#" data-toggle="modal" data-target="#myModal">
 				<i class="glyphicon glyphicon-phone"></i>
 			</a>
 		</li>
