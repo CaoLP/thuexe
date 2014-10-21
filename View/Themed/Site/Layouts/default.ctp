@@ -20,7 +20,9 @@
 </head>
 <body>
 <div class="top-panel">
-	<div class="container"></div>
+	<div class="container">
+		<img src="/img/logo.png">
+	</div>
 </div>
 <div class="navbar navbar-default navbar-static-top bsnavbar top-nav">
 	<div class="container">
@@ -30,7 +32,7 @@
 	</div>
 </div>
 <div class="row m-l-r-zero">
-	<img src="http://www.dulichthu-dong.com/images/2014/slogon-top-nd5.jpg" style="width: 100%;">
+	<img src="/img/pan.jpg" style="width: 100%;">
 </div>
 <div class="row content-index remove-m-t">
 	<div class="container">

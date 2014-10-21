@@ -57,9 +57,11 @@ class AppController extends Controller
         $this->loadModel('Option');
         $this->Option->writeConfigure();
 
+		if(!isset($this->request->params['admin'])){
 		$this->loadModel('Post');
 		$tomorrow = $this->Post->findTomorrow();
 		$this->set(compact('tomorrow'));
+		}
     }
     public function setTitleForLayout(){
         if (isset($this->title_for_layout)) {

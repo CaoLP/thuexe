@@ -20,7 +20,9 @@
 </head>
 <body>
 <div class="top-panel">
-    <div class="container"></div>
+    <div class="container">
+		<img src="/img/logo.png">
+    </div>
 </div>
 <div class="navbar navbar-default navbar-static-top bsnavbar top-nav">
     <div class="container">

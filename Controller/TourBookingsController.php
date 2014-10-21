@@ -179,6 +179,17 @@ class TourBookingsController extends AppController
     public function admin_index()
     {
         $this->TourBooking->recursive = 0;
+
+		$con = array();
+		if(isset($this->request->query['date'])&&!empty($this->request->query['date'])){
+			$date = $this->request->query['date'];
+			$con['conditions']['TourBooking.tour_date'] = $date;
+		}
+		if(isset($this->request->query['status'])&&!empty($this->request->query['status'])){
+			$con['conditions']['TourBooking.status'] = $this->request->query['status'];
+		}
+		$this->Paginator->settings  = $con;
+
         $this->set('tourBookings', $this->Paginator->paginate());
     }
 
@@ -241,8 +252,6 @@ class TourBookingsController extends AppController
             $options = array('conditions' => array('TourBooking.' . $this->TourBooking->primaryKey => $id));
             $this->request->data = $this->TourBooking->find('first', $options);
         }
-        $tourSchedules = $this->TourBooking->TourSchedule->find('list');
-        $this->set(compact('tourSchedules'));
     }
 
     /**

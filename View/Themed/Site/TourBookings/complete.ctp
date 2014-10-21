@@ -21,12 +21,12 @@ $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
                         <hr>
                         <p>Cám ơn bạn đã sử dụng dịch vụ của chúng tôi.</p>
 
-                        <p>Các thông tin này đã được chuyển đến hệ thống của <?php echo Configure::read('W.Site.name');?> và đồng thời email cho bạn tham khảo.</p>
+                        <p>Các thông tin này đã được chuyển đến hệ thống của <?php echo Configure::read('W.Site.name');?>.</p>
 
-                        <p>Chúng tôi sẽ trả lời bạn trong thời hạn 2 ngày làm việc.</p>
+                        <p>Chúng tôi sẽ trả lời bạn trong thời gian sớm nhấ.</p>
 
                         <p><strong>Mọi thắc mắc xin liên hệ :</strong></p>
-                        <?php echo Configure::read('W.Site.help_phone ');?>
+                        <?php echo Configure::read('W.Site.help_phone');?>
                         <br>
                             <br>
                             <a href="/">[trở về trang chủ]</a></p>
