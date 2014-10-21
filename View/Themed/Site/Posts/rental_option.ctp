@@ -6,7 +6,7 @@ setlocale(LC_MONETARY, 'vi_VN');
         <div class="col-md-12 p-r-15">
             <h2 class="feature-title-tour f-left">Dịch vụ thuê xe du lịch</h2>
 
-            <img class="f-right" src="http://cdn.dulichhe.com/images/2014/goi-tu-van.gif" width="239"
+            <img class="f-right" src="/img/call.png" width="239"
                  height="50" alt="Goi tu van">
         </div>
         <hr>

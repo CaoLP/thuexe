@@ -7,7 +7,7 @@ $post_metas = Set::combine($tour['Postmetum'], '{n}.meta_key', '{n}');
         <div class="col-md-12 p-r-15">
             <h2 class="feature-title-tour f-left">ĐẶT TOUR</h2>
 
-            <img class="f-right" src="http://cdn.dulichhe.com/images/2014/goi-tu-van.gif" width="239"
+            <img class="f-right" src="/img/call.png" width="239"
                  height="50" alt="Goi tu van">
         </div>
     </div>

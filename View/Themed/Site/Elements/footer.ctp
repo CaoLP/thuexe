@@ -1,8 +1,8 @@
 <footer>
-	<div class="row text-center">
+	<div class="text-center">
 		Kết nối với <strong><?php echo Configure::read('W.Site.name');?></strong>
 	</div>
-	<div class="row  text-center">
+	<div class="text-center">
 		<ul class="connect">
 			<li><a href="<?php echo Configure::read('W.Site.name');?>"><img src="/img/social-fa.gif" alt="Saigontourist" width="50"
 					 height="50"></a></li>

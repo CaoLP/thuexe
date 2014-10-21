@@ -1,5 +1,3 @@
-
-
 <?php
 setlocale(LC_MONETARY, 'vi_VN');
 $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
@@ -9,7 +7,7 @@ $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
         <div class="col-md-12 p-r-15">
             <h2 class="feature-title-tour f-left">ĐẶT TOUR</h2>
 
-            <img class="f-right" src="http://cdn.dulichhe.com/images/2014/goi-tu-van.gif" width="239"
+            <img class="f-right" src="/img/call.png" width="239"
                  height="50" alt="Goi tu van">
         </div>
     </div>
@@ -23,14 +21,13 @@ $post_metas = Set::combine ($tour['Postmetum'], '{n}.meta_key', '{n}');
                         <hr>
                         <p>Cám ơn bạn đã sử dụng dịch vụ của chúng tôi.</p>
 
-                        <p>Các thông tin này đã được chuyển đến hệ thống của Saigontourist và đồng thời email cho bạn tham khảo.</p>
+                        <p>Các thông tin này đã được chuyển đến hệ thống của <?php echo Configure::read('W.Site.name');?> và đồng thời email cho bạn tham khảo.</p>
 
                         <p>Chúng tôi sẽ trả lời bạn trong thời hạn 2 ngày làm việc.</p>
 
                         <p><strong>Mọi thắc mắc xin liên hệ :</strong></p>
-
-                        <p>Phòng Du lịch nội địa: 84+83 <strong>833 6442</strong> <br>
-                            Phòng Du lịch nước ngoài: 84+83 <strong>823 4219</strong> - <strong>3824 44819</strong> <br>
+                        <?php echo Configure::read('W.Site.help_phone ');?>
+                        <br>
                             <br>
                             <a href="/">[trở về trang chủ]</a></p>
                     </div>
