@@ -43,6 +43,9 @@ if ($this->request->params['action'] == 'admin_add') {
                     <li class="active">
                         <a href="#posts" data-toggle="tab"><?php echo __('Contents'); ?></a>
                     </li>
+					<li class="">
+						<a href="#seo" data-toggle="tab"><?php echo __('Seo'); ?></a>
+					</li>
                 </ul>
                 <br>
 
@@ -85,6 +88,18 @@ if ($this->request->params['action'] == 'admin_add') {
                             ?>
                         </div>
                     </div>
+					<div class="tab-pane" id="seo">
+						<?php
+						if(isset($this->request->data['Seo']['id']))
+							echo $this->Form->hidden('Seo.id');
+						echo $this->Form->hidden('Seo.post_id', array('value' =>$this->request->data['Post']['id']));
+						echo $this->Form->input('Seo.meta_keywords');
+						echo $this->Form->input('Seo.meta_description');
+						echo $this->Form->input('Seo.meta_robots');
+						echo $this->Form->input('Seo.changefreq');
+						echo $this->Form->input('Seo.priority');
+						?>
+					</div>
                 </div>
             </div>
         </div>

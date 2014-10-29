@@ -6,6 +6,7 @@
 			<img class="f-right" src="/img/call.png" width="239"
 				 height="50" alt="Goi tu van">
 		</div>
+		<?php echo $this->element('fb');?>
 	</div>
 	<div class="col-md-12 p-r-15">
 		<?php

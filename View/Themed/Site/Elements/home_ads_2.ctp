@@ -1,5 +1,20 @@
 <div class="panel panel-default tour-right-panel">
 	<!-- Default panel contents -->
+	<div class="panel-heading header-style">Kết nối với chúng tôi</div>
+	<div class="panel-body" style="overflow-x: hidden">
+		<div class="fb-like-box"
+			 data-href="<?php echo Configure::read('W.Social.facebook');?>"
+			 data-colorscheme="light"
+			 data-show-faces="true"
+			 data-header="true"
+			 data-stream="false"
+			 data-show-border="false"
+			 data-width="234"></div>
+	</div>
+
+</div>
+<div class="panel panel-default tour-right-panel">
+	<!-- Default panel contents -->
 	<div class="panel-heading header-style">Lựa chọn khác</div>
 	<div class="panel-body">
 		<?php

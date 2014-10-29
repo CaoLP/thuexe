@@ -60,6 +60,7 @@ if (count ($temp_img) > 0) $images = $temp_img;
 			</blockquote>
 		</div>
 		<?php endif;?>
+		<?php echo $this->element('fb');?>
 	</div>
 	<div class="row">
 		<div class="col-md-12 p-r-15">

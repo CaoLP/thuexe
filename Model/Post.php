@@ -170,6 +170,7 @@ class Post extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	public $hasOne = 'Seo';
 
 	function isUniqueTitle ($check) {
 

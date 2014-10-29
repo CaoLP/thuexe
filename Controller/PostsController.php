@@ -13,7 +13,7 @@ class PostsController extends AppController
      *
      * @var array
      */
-    public $components = array('Paginator');
+    public $components = array('Paginator','RequestHandler');
     /**
      * index method
      *
@@ -21,7 +21,7 @@ class PostsController extends AppController
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index','home','car_rental','view','search');
+        $this->Auth->allow('index','home','car_rental','view','search','sitemap');
     }
     /**
      * index method
@@ -90,6 +90,21 @@ class PostsController extends AppController
 			)
 		);
 		$this->set('posts', $this->Paginator->paginate());
+	}
+	public function sitemap(){
+		$posts = $this->Post->find('all',array(
+									 'conditions'=>array(
+										 'Post.type' => array(
+											 'daily_tour',
+											 'weekly_tour',
+											 'car_rental',
+										 )
+									 )
+								));
+		$this->layout = 'xml/default';
+		$this->set(compact('posts'));
+//		$this->RequestHandler->respondAs('xml');
+		$this->RequestHandler->respondAs('application/xml');
 	}
 	/**
 	 * index method
@@ -327,6 +342,7 @@ class PostsController extends AppController
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Post->save($this->request->data)) {
                 $this->Post->Postmetum->saveMany($this->request->data['Postmetum']);
+                $this->Post->Seo->save($this->request->data);
                 $this->Session->setFlash(__('The post has been saved.'));
                 return $this->redirect(array('action' => 'index', $type));
             } else {

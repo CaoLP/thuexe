@@ -22,7 +22,6 @@
                         <tr>
                             <th><?php echo $this->Paginator->sort('id'); ?></th>
                             <th><?php echo $this->Paginator->sort('title','Tựa bài viết'); ?></th>
-                            <th><?php echo $this->Paginator->sort('status','Trạng thái'); ?></th>
                             <th><?php echo $this->Paginator->sort('parent_id','Mục cha'); ?></th>
                             <th><?php echo $this->Paginator->sort('url','Đường dẫn'); ?></th>
                             <th><?php echo $this->Paginator->sort('type','Loại'); ?></th>
@@ -39,7 +38,6 @@
                                 <td>
                                     <?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'edit', $post['Post']['id'],$type)); ?>
                                 </td>
-                                <td><?php echo h($post['Post']['status']); ?>&nbsp;</td>
                                 <td>
                                     <?php echo $this->Html->link($post['ParentPost']['title'], array('controller' => 'posts', 'action' => 'view', $post['ParentPost']['id'])); ?>
                                 </td>

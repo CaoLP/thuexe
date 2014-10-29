@@ -9,6 +9,7 @@ setlocale(LC_MONETARY, 'vi_VN');
             <img class="f-right" src="/img/call.png" width="239"
                  height="50" alt="Goi tu van">
         </div>
+		<?php echo $this->element('fb');?>
         <hr>
     </div>
     <div class="col-md-12 p-r-15">

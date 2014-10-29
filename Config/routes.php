@@ -35,6 +35,7 @@ Router::connect('/tour-hang-tuan/:url', array('controller' => 'posts', 'action' 
     )));
 Router::connect('/lien-he', array('controller' => 'contacts', 'action' => 'contact'));
 Router::connect('/admin', array('admin'=>true,'controller' => 'dashboard', 'action' => 'index'));
+Router::connect('/sitemap.xml', array('controller' => 'posts', 'action' => 'sitemap'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

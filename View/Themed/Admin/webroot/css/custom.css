@@ -22,3 +22,55 @@ Assigned to:	You
     display: table-row;
 }
 
+.statistics {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+}
+.statistics>li {
+    min-width: 128px;
+    display: inline-block;
+    margin: 8px 14px;
+    position: relative;
+    border: 1px solid rgb(69, 206, 247);
+    border-radius: 10px;
+    padding: 10px;
+}
+.statistics>li .main-info {
+    margin-bottom: 6px;
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 6px;
+    color: #6a6a6a;
+}
+
+.statistics>li .main-info>a {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 4px 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.statistics>li .main-info>a>span {
+    color: white;
+    padding: 6px 5px;
+    margin: 0;
+}
+.statistics>li .main-info>strong {
+    font-size: 24px;
+    font-weight: 500;
+    float: left;
+    text-shadow: 0 1px 0 #fafafa;
+}
+.statistics>li>span {
+    margin-top: 7px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #666;
+    font-size: 11px;
+}
