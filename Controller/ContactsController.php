@@ -26,12 +26,40 @@ class ContactsController extends AppController {
  */
 	public function admin_index() {
 		$this->Contact->recursive = 0;
+		$con = array();
+		if(isset($this->request->query['status'])&&!empty($this->request->query['status'])){
+			$con['conditions']['Contact.status'] = $this->request->query['status'];
+		}
+		$this->Paginator->settings  = $con;
 		$this->set('contacts', $this->Paginator->paginate());
 	}
 	function  captcha()  {
 		$this->autoRender = false;
 		$this->layout='ajax';
 		$this->Captcha->create();
+	}
+	/**
+	 * admin_edit method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+	public function admin_edit($id = null)
+	{
+		if (!$this->Contact->exists($id)) {
+			throw new NotFoundException(__('Invalid tour booking'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->Contact->save($this->request->data)) {
+				$this->Session->setFlash(__('The tour booking has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Contact->setFlash(__('The tour booking could not be saved. Please, try again.'));
+			}
+		} else{
+			return $this->redirect(array('action' => 'index'));
+		}
 	}
 /**
  * admin_add method

@@ -7,3 +7,18 @@ Last change:	03/25/2013
 Assigned to:	You
 
 -------------------------------------------------------------------*/
+/**/
+/*--------------------------------------------------------*/
+.table-toggle-expand{
+    cursor: pointer;
+}
+.table-toggle-expand:hover{
+    background-color: #f5f5f5;
+}
+.table-expandable{
+    display: none;
+}
+.table-expandable.tb-expanded{
+    display: table-row;
+}
+

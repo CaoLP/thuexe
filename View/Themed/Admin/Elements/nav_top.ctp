@@ -13,6 +13,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="<?php echo $this->Html->url(array('controller'=>'users','action'=>'index'));?>">
+						<i class="icon-user"></i>
+						Quản lý người dùng
+					</a>
+				</li>
                 <li>
 
                     <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
