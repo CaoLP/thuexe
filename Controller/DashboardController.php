@@ -26,12 +26,12 @@ class DashboardController extends AppController {
 
 		$total_booking = $this->TourBooking->find('count',array(
 															   'conditions'=>array(
-																   'TourBooking.status'=> 1
+																   'TourBooking.status'=> 0
 															   )
 														  ));
 		$total_contact = $this->Contact->find('count',array(
 															   'conditions'=>array(
-																   'Contact.status'=> 1
+																   'Contact.status'=> 0
 															   )
 														  ));
 		$this->set(compact('total_booking','total_contact'));

@@ -65,6 +65,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index'))?>">Tùy chỉnh</a></li>
+							<li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index','Site'))?>">Website</a></li>
                             <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index','ads'))?>">Quảng cáo</a></li>
                             <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index','slide'))?>">Slides</a></li>
                             <li><a href="<?php echo $this->Html->url(array('controller'=>'options','action'=>'index','promote'))?>">Khuyến mãi</a></li>

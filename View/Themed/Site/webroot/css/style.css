@@ -371,3 +371,35 @@
 .tab-content{
     padding-top: 20px;
 }
+.site-title{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(51, 53, 242);
+    text-shadow: 3px 2px 1px #CFBCC4;
+}
+.phone-type{
+    font-size: 35px;
+    color: rgb(19, 114, 240);
+    text-shadow: 3px 2px 4px #122C64;
+}
+.table-top{
+    width: 100%;
+    vertical-align: middle;
+}
+.table-top td{
+    padding: 5px;
+}
+.top-name{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+.top-phone{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(23, 77, 192);
+}
+.or{
+    font-size: 10px;
+}

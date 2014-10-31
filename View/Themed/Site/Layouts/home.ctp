@@ -29,7 +29,32 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 <div class="top-panel">
     <div class="container">
-		<img src="/img/logo.png">
+		<div class="row">
+			<img class="pull-left" src="/img/logo.png">
+
+			<div class="pull-right">
+				<div class="row site-title text-right">TRUNG TÂM ĐIỀU HÀNH XE NGỌC TUẤN</div>
+				<div class="row">
+					<table class="table-top">
+						<tr>
+							<td class="text-right">
+								<i class="glyphicon glyphicon-phone-alt phone-type"></i>
+							</td>
+							<td class="text-left">
+								<span class="top-name">Alex</span><br><span class="top-phone">0913645958 <span
+											class="or">hoặc</span> 0969751504</span>
+							</td>
+							<td class="text-right">
+								<i class="glyphicon glyphicon-phone-alt phone-type"></i>
+							</td>
+							<td class="text-left">
+								<span class="top-name">Mr.Dinh</span><br><span class="top-phone">0918703131</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
     </div>
 </div>
 <div class="navbar navbar-default navbar-static-top bsnavbar top-nav">
