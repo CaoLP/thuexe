@@ -7,7 +7,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 <i class="icon-cog"></i>
             </button>
-            <a class="navbar-brand" href="<?php echo $this->Html->url(array('controller'=>'dashboard','action'=>'dashboard'));?>"><?php echo Configure::read('W.Site.name');?></a>
+            <a class="navbar-brand" href="<?php echo $this->Html->url(array('controller'=>'dashboard','action'=>'index'));?>"><?php echo Configure::read('W.Site.name');?></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

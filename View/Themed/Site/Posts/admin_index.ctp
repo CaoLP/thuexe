@@ -51,9 +51,9 @@
                                 <td><?php echo h($post['Post']['url']); ?>&nbsp;</td>
                                 <td><?php echo h($post['Post']['type']); ?>&nbsp;</td>
                                 <td class="actions">
-                                    <?php echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $post['Post']['id']), array('escape' => false, 'title' => __('View'))); ?>
+                                    <?php //echo $this->Html->link('<i class="icon-zoom-in"></i>', array('action' => 'view', $post['Post']['id']), array('escape' => false, 'title' => __('View'))); ?>
                                     <?php echo $this->Html->link('<i class="icon-edit"></i>', array('action' => 'edit', $post['Post']['id']), array('escape' => false, 'title' => __('Edit'))); ?>
-                                    <?php echo $this->Form->postLink('<i class="icon-trash"></i>', array('action' => 'delete', $post['Post']['id']), array('escape' => false, 'title' => __('Delete')), __('Are you sure you want to delete # %s?', $post['Post']['id'])); ?>
+                                    <?php //echo $this->Form->postLink('<i class="icon-trash"></i>', array('action' => 'delete', $post['Post']['id']), array('escape' => false, 'title' => __('Delete')), __('Are you sure you want to delete # %s?', $post['Post']['id'])); ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

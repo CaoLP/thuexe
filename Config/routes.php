@@ -33,6 +33,11 @@ Router::connect('/tour-hang-tuan/:url', array('controller' => 'posts', 'action' 
     array('pass' => array(
         'url'
     )));
+Router::connect('/page', array('controller' => 'posts', 'action' => 'index', 'page'));
+Router::connect('/page/:url', array('controller' => 'posts', 'action' => 'view', 'page'),
+    array('pass' => array(
+        'url'
+    )));
 Router::connect('/lien-he', array('controller' => 'contacts', 'action' => 'contact'));
 Router::connect('/admin', array('admin'=>true,'controller' => 'dashboard', 'action' => 'index'));
 Router::connect('/sitemap.xml', array('controller' => 'posts', 'action' => 'sitemap'));

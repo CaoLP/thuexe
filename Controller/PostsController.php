@@ -13,40 +13,43 @@ class PostsController extends AppController
      *
      * @var array
      */
-    public $components = array('Paginator','RequestHandler');
+    public $components = array('Paginator', 'RequestHandler');
+
     /**
      * index method
      *
      * @return void
      */
-    public function beforeFilter() {
+    public function beforeFilter()
+    {
         parent::beforeFilter();
-        $this->Auth->allow('index','home','car_rental','view','search','sitemap');
+        $this->Auth->allow('index', 'home', 'car_rental', 'view', 'search', 'sitemap');
     }
+
     /**
      * index method
      *
      * @return void
      */
-    public function index($type=null)
+    public function index($type = null)
     {
         $this->Post->recursive = 1;
 
         $this->set(compact('type'));
-        if($type == 'rental_option') {
-            $rental_options = $this->Post->find('all',array(
-                'conditions'=>array('Post.type'=>'rental_option')
+        if ($type == 'rental_option') {
+            $rental_options = $this->Post->find('all', array(
+                'conditions' => array('Post.type' => 'rental_option')
             ));
-            $opts = Set::combine($rental_options,'{n}.Post.id','{n}.Postmetum.0.meta_value');
-            $rental_options  = Set::combine($rental_options,'{n}.Post.id','{n}.Post.title');
+            $opts = Set::combine($rental_options, '{n}.Post.id', '{n}.Postmetum.0.meta_value');
+            $rental_options = Set::combine($rental_options, '{n}.Post.id', '{n}.Post.title');
             $this->loadModel('CarTypeCar');
             $car_types = $this->CarTypeCar->CarType->find('list');
             $carTypeCars = $this->CarTypeCar->find('all');
-            $carTypeCars = Set::combine($carTypeCars,array('{0}_{1}','{n}.CarTypeCar.post_id','{n}.CarTypeCar.car_type_id'),'{n}');
-            $this->set(compact('carTypeCars','rental_options','car_types','opts'));
+            $carTypeCars = Set::combine($carTypeCars, array('{0}_{1}', '{n}.CarTypeCar.post_id', '{n}.CarTypeCar.car_type_id'), '{n}');
+            $this->set(compact('carTypeCars', 'rental_options', 'car_types', 'opts'));
             $this->view = 'rental_option';
-			$this->title_for_layout = 'Bảng giá dịch vụ xe';
-        }else{
+            $this->title_for_layout = 'Bảng giá dịch vụ xe';
+        } else {
             if ($type != null) {
                 $this->Paginator->settings = array(
                     'conditions' => array(
@@ -54,94 +57,100 @@ class PostsController extends AppController
                         'Post.status' => 1
                     )
                 );
-				switch($type){
-					case 'car_rental':
-						$this->title_for_layout = 'Thông tin xe';
-						break;
-					case 'daily_tour':
-						$this->title_for_layout = 'Tour hằng ngày';
-						break;
-					case 'weekly_tour':
-						$this->title_for_layout = 'Tour hằng tuần';
-						break;
-					default:
-						$this->title_for_layout = 'Thông tin';
-						break;
-				}
+                switch ($type) {
+                    case 'car_rental':
+                        $this->title_for_layout = 'Thông tin xe';
+                        break;
+                    case 'daily_tour':
+                        $this->title_for_layout = 'Tour hằng ngày';
+                        break;
+                    case 'weekly_tour':
+                        $this->title_for_layout = 'Tour hằng tuần';
+                        break;
+                    default:
+                        $this->title_for_layout = 'Thông tin';
+                        break;
+                }
             }
             $this->set('posts', $this->Paginator->paginate());
         }
 
     }
-	public function search()
-	{
-		$q = '';
-		if(isset($this->request->data['q'])) $q = $this->request->data['q'];
-		$this->Post->recursive = 1;
-		$this->Paginator->settings = array(
-			'conditions' => array(
-				'Post.type' => array(
-					'daily_tour',
-					'weekly_tour',
-					'car_rental',
-				),
-				'Post.title like' => '%'.$q.'%',
-				'Post.status' => 1
-			)
-		);
-		$this->set('posts', $this->Paginator->paginate());
-	}
-	public function sitemap(){
-		$posts = $this->Post->find('all',array(
-									 'conditions'=>array(
-										 'Post.type' => array(
-											 'daily_tour',
-											 'weekly_tour',
-											 'car_rental',
-										 )
-									 )
-								));
-		$this->layout = 'xml/default';
-		$this->set(compact('posts'));
+
+    public function search()
+    {
+        $q = '';
+        if (isset($this->request->data['q'])) $q = $this->request->data['q'];
+        $this->Post->recursive = 1;
+        $this->Paginator->settings = array(
+            'conditions' => array(
+                'Post.type' => array(
+                    'daily_tour',
+                    'weekly_tour',
+                    'car_rental',
+                ),
+                'Post.title like' => '%' . $q . '%',
+                'Post.status' => 1
+            )
+        );
+        $this->set('posts', $this->Paginator->paginate());
+    }
+
+    public function sitemap()
+    {
+        $posts = $this->Post->find('all', array(
+            'conditions' => array(
+                'Post.type' => array(
+                    'daily_tour',
+                    'weekly_tour',
+                    'car_rental',
+                )
+            )
+        ));
+        $this->layout = 'xml/default';
+        $this->set(compact('posts'));
 //		$this->RequestHandler->respondAs('xml');
-		$this->RequestHandler->respondAs('application/xml');
-	}
-	/**
-	 * index method
-	 *
-	 * @return void
-	 */
-	public function home()
-	{
-		$this->layout = 'home';
-		$this->title_for_layout = 'Trang chủ';
-		$cars = $this->Post->getTopCar();
-		$top_daily =  $this->Post->getTopDaily();
-		$top_weekly =  $this->Post->getTopWeekly();
-		$features = $this->Post->getFeatures();
-		$this->set(compact('cars','top_daily','top_weekly','features'));
-	}
-	/**
-	 * index method
-	 *
-	 * @return void
-	 */
-	public function car_rental()
-	{
-		$this->Post->recursive = 1;
-		$type = 'car_rental';
-		$this->Paginator->settings = array(
-			'conditions' => array(
-				'Post.type' => $type,
-				'Post.status' => 1
-			)
-		);
-		$this->title_for_layout = 'Thông tin xe';
-		$this->loadModel('CarType');
-		$carTypes= $this->CarType->find('list');
-		$this->set(compact('type','carTypes'));
-		$this->set('posts', $this->Paginator->paginate());
-	}
+        $this->RequestHandler->respondAs('application/xml');
+    }
+
+    /**
+     * index method
+     *
+     * @return void
+     */
+    public function home()
+    {
+        $this->layout = 'home';
+        $this->title_for_layout = 'Trang chủ';
+        $cars = $this->Post->getTopCar();
+        $top_daily = $this->Post->getTopDaily();
+        $top_weekly = $this->Post->getTopWeekly();
+        $features = $this->Post->getFeatures();
+        $this->set(compact('cars', 'top_daily', 'top_weekly', 'features'));
+    }
+
+    /**
+     * index method
+     *
+     * @return void
+     */
+    public function car_rental()
+    {
+        $this->Post->recursive = 1;
+        $type = 'car_rental';
+        $this->Paginator->settings = array(
+            'conditions' => array(
+                'Post.type' => $type,
+                'Post.status' => 1
+            )
+        );
+        $this->title_for_layout = 'Thông tin xe';
+        $this->loadModel('CarType');
+        $carTypes = $this->CarType->find('list');
+        $this->set(compact('type', 'carTypes'));
+        $this->set('posts', $this->Paginator->paginate());
+    }
+
     /**
      * view method
      *
@@ -149,17 +158,20 @@ class PostsController extends AppController
      * @param string $id
      * @return void
      */
-    public function view($url = '', $type='')
+    public function view($url = '', $type = '')
     {
-        $post = $this->Post->findPostBySlug($url,$type);
-        $this->set(compact('post','type'));
-		if($type == 'car_rental'){
-			$this->view='car_rental_view';
-			$this->loadModel('CarType');
-			$carTypes= $this->CarType->find('list');
-			$this->set(compact('carTypes'));
-		}
-		$this->title_for_layout = $post['Post']['title'];
+        $post = $this->Post->findPostBySlug($url, $type);
+        $this->set(compact('post', 'type'));
+        if ($type == 'car_rental') {
+            $this->view = 'car_rental_view';
+            $this->loadModel('CarType');
+            $carTypes = $this->CarType->find('list');
+            $this->set(compact('carTypes'));
+        }
+        if ($type == 'page') {
+            $this->view = 'page';
+        }
+        $this->title_for_layout = $post['Post']['title'];
 //        if (!$this->Post->exists($id)) {
 //            throw new NotFoundException(__('Invalid post'));
 //        }
@@ -283,26 +295,26 @@ class PostsController extends AppController
     {
         if ($type != null) {
             $data = $this->Post->checkDraftPost();
-            if($data ==null){
-            $this->Post->create();
-            $templateData = array(
-                'Post' => array(
-                    'status' => '0'
-                )
-            );
-            $this->Post->save($templateData, false);
-            $id = $this->Post->id;
-            }else{
+            if ($data == null) {
+                $this->Post->create();
+                $templateData = array(
+                    'Post' => array(
+                        'status' => '0'
+                    )
+                );
+                $this->Post->save($templateData, false);
+                $id = $this->Post->id;
+            } else {
                 $id = $data;
                 $templateData = array(
                     'Post' => array(
-                        'id' =>$id,
-                        'body'=>'',
-                        'title'=>'',
-                        'excerpt'=>'',
-                        'url'=>'',
-                        'parent_id'=>0,
-                        'type'=>'post',
+                        'id' => $id,
+                        'body' => '',
+                        'title' => '',
+                        'excerpt' => '',
+                        'url' => '',
+                        'parent_id' => 0,
+                        'type' => 'post',
                         'status' => '0'
                     )
                 );
@@ -358,9 +370,9 @@ class PostsController extends AppController
         switch ($type) {
             case 'car_rental':
                 $this->title_for_layout = 'Xe cho thuê';
-				$this->loadModel('CarType');
-				$carTypes= $this->CarType->find('list');
-				$this->set(compact('carTypes'));
+                $this->loadModel('CarType');
+                $carTypes = $this->CarType->find('list');
+                $this->set(compact('carTypes'));
                 break;
             case 'daily_tour':
                 $this->title_for_layout = 'Tour hằng ngày';
@@ -370,6 +382,9 @@ class PostsController extends AppController
                 break;
             case 'rental_option':
                 $this->title_for_layout = 'Chặn xe';
+                break;
+            case 'page':
+                $this->title_for_layout = 'Trang tỉnh';
                 break;
             default:
                 $this->title_for_layout = 'Post';

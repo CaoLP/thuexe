@@ -19,6 +19,11 @@
 		?> w-t">
 			<a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'index', 'rental_option')); ?>">BÁO
 				GIÁ XE</a></li>
+        <li class="<?php
+        if (isset($type) && $type == 'page')
+            echo 'active';
+        ?> w-t">
+            <a href="<?php echo $this->Html->url (array ('controller' => 'posts', 'action' => 'view', 'page','url'=>'ve-xe-da-nang-hue')); ?>">VÉ XE ĐÀ NẴNG - HUẾ</a></li>
 		<li class="<?php
 		if (isset($type) && $type == 'daily_tour')
 			echo 'active';

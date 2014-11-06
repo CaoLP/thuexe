@@ -14,9 +14,9 @@
                 <ul class="mainnav">
 
                     <li class="">
-                        <a href="<?php echo $this->Html->url(array('controller'=>'dashboard','action'=>'index'))?>">
-                            <i class="icon-home"></i>
-                            <span>Dashboard</span>
+                        <a href="<?php echo $this->Html->url(array('controller'=>'posts','action'=>'index','page'))?>">
+                            <i class="icon-book"></i>
+                            <span>Trang tỉnh</span>
                         </a>
                     </li>
 
